@@ -313,3 +313,163 @@ footer {
     width: 100%;
     height: 100%;
 }
+
+
+/* Add to your existing styles.css file */
+
+/* Style for the button link on the main Projects section */
+.projects-overview {
+    text-align: center; /* Center the button */
+    margin: 40px 0;
+}
+
+.button-link {
+    display: inline-block; /* Make it behave like a button */
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform for slight press effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow */
+}
+
+.button-link:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.button-link:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Reduce shadow when pressed */
+}
+
+
+/* Style for the smaller back button links */
+.button-link-small {
+     display: inline-block;
+     padding: 8px 15px;
+     background-color: #6c757d; /* Grey color */
+     color: white;
+     border-radius: 5px;
+     text-decoration: none;
+     font-size: 0.9rem;
+     transition: background-color 0.3s ease;
+}
+
+.button-link-small:hover {
+     background-color: #5a6268;
+     text-decoration: none;
+}
+
+
+/* Styles for the Project List Page (android-java-projects.html) */
+.projects-list-container {
+    display: flex; /* Use flexbox to arrange items */
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between project cards */
+}
+
+.project-card-link {
+     text-decoration: none; /* Remove underline from the link wrapping the card */
+     color: inherit; /* Inherit text color from parent */
+     display: block; /* Make the link take up block space */
+     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.project-card-link:hover {
+     text-decoration: none; /* Ensure no underline on hover */
+     transform: translateY(-5px); /* Slight lift effect on hover */
+     box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* More pronounced shadow on hover */
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex; /* Use flexbox for card content layout */
+    align-items: center; /* Vertically align items */
+    gap: 20px; /* Space between image and text */
+}
+
+.project-card img {
+    width: 80px; /* Fixed width for small image */
+    height: 80px; /* Fixed height */
+    object-fit: cover; /* Cover the area, might crop */
+    border-radius: 5px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.project-card h3 {
+     margin-top: 0;
+     margin-bottom: 5px;
+     color: #007bff; /* Use primary color for title */
+}
+
+.project-card p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.project-card .technologies-used {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0; /* No space below technologies */
+}
+
+.project-card .view-details-button {
+     display: inline-block;
+     margin-top: 10px;
+     padding: 5px 10px;
+     background-color: #e9ecef; /* Light background */
+     border-radius: 3px;
+     font-size: 0.8rem;
+     color: #333;
+}
+
+/* Responsive adjustments for project cards */
+@media (max-width: 600px) {
+    .project-card {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+    .project-card img {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Ensure existing video-container style is present and correct */
+/* (It seems correct in your original CSS provided) */
+/*
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    background: #000;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+*/
+
+/* Add this if you want a hr style */
+hr {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircleUp Project Details | Sana Mehboob</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Optional: Add a Favicon -->
+    <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Sana Mehboob</h1>
+            <p>CircleUp: Next-Gen Social Messaging App</p>
+             <nav>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="android-java-projects.html">Projects List</a></li> <!-- Link back to the list -->
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="project-details"> <!-- Changed section ID for clarity -->
+        <div class="container">
+
+            <h2>CircleUp: Next-Gen Social Messaging App (Final Year Project)</h2>
+
+            <div class="project-item"> <!-- Reusing the project-item style -->
+                 <!-- Use a relevant screenshot of your app here -->
+                <img src="images/circleup-screenshot.jpg" alt="Screenshot of CircleUp Messaging App - Chats List">
+
+                <p><strong>Project Overview:</strong></p>
+                <p>Developed 'CircleUp,' a robust and feature-rich Android messaging application in Java as my Final Year Project. This application goes beyond basic messaging to provide a secure and comprehensive communication platform, showcasing a strong command over various Android development concepts, backend integration, security implementation, and real-time features. CircleUp demonstrates the ability to build complex, full-stack mobile applications.</p>
+
+                <p><strong>Key Technical Stack:</strong></p>
+                <p>Implemented the application using a diverse set of modern technologies:</p>
+                <ul>
+                    <li><strong>Language:</strong> Java</li>
+                    <li><strong>IDE:</strong> Android Studio</li>
+                    <li><strong>UI/Layout:</strong> XML Layouts</li>
+                    <li><strong>Backend (Authentication & Realtime Database):</strong> Firebase Realtime Database for real-time data synchronization (messages, user status, etc.) and Firebase Authentication for user registration and login.</li>
+                    <li><strong>Backend (Firestore for Feedback):</strong> Utilized Firestore for managing user feedback data efficiently.</li>
+                    <li><strong>Local Persistence:</strong> Room Database for robust offline data storage and caching.</li>
+                    <li><strong>Media Storage:</strong> Supabase for storing media files, including videos and voice notes.</li>
+                    <li><strong>Push Notifications:</strong> Integrated OneSignal SDK for sending and managing push notifications (e.g., new message alerts, friend requests).</li>
+                    <li><strong>Background Tasks:</strong> Implemented scheduled messages using WorkManager for reliable background execution.</li>
+                    <li><strong>Version Control:</strong> Git and GitHub for collaborative development and code management.</li>
+                    <li><strong>APIs/Concepts:</strong> RESTful APIs (implied by Firebase/Supabase interaction), JSON data handling.</li>
+                </ul>
+
+                 <p><strong>Core Messaging & Communication Features:</strong></p>
+                <ul>
+                    <li><strong>One-to-One Chats:</strong> Direct, private messaging between users.</li>
+                    <li><strong>Group Chats:</strong> Create and participate in group conversations.</li>
+                    <li><strong>Temporary Chat Rooms:</strong> Feature for time-limited conversations (including voice note implementation stored on Supabase).</li>
+                    <li><strong>Scheduled Messages:</strong> Ability to schedule text or image messages to be sent at a later time using WorkManager.</li>
+                    <li><strong>Real-time Updates:</strong> Instant message delivery and status updates using Firebase Realtime Database.</li>
+                </ul>
+
+                 <p><strong>Advanced & Unique Features:</strong></p>
+                <ul>
+                    <li><strong>End-to-End Encryption (E2EE):</strong> Implemented E2EE for one-to-one chats to ensure message privacy. Messages are encrypted/decrypted locally on devices. (Likely involving concepts like AES for symmetric encryption and RSA for key exchange/management).</li>
+                    <li><strong>Secure Access with Passphrase:</strong> Chats are protected by a user-defined security passphrase/PIN. Messages cannot be decrypted without this passphrase, even if the device is compromised, demonstrating a strong focus on user data security.</li>
+                    <li><strong>Account Recovery:</strong> Implemented an account recovery mechanism, including generating and using a recovery code (though resetting passphrase results in loss of old encrypted messages, highlighting the importance of the original passphrase).</li>
+                    <li><strong>Shared Drawing Feature:</strong> A collaborative feature allowing users in a chat to draw together in real-time.</li>
+                    <li><strong>Invisible Ink Feature:</strong> Messages initially appear hidden and are revealed by user interaction.</li>
+                    <li><strong>Shared Web View Feature:</strong> Allows both users in a chat to view and interact with a web page simultaneously, enabling collaborative browsing or content sharing (like your "Let's get started together" feature).</li>
+                    <!-- Add other unique features if any -->
+                </ul>
+
+                <p><strong>Admin Panel (Separate Module):</strong></p>
+                 <p>Developed a dedicated Admin Dashboard module to manage the application and users:</p>
+                <ul>
+                    <li>View Notifications (alerts, reports).</li>
+                    <li>Broadcast Messages to all users.</li>
+                    <li>View and manage all registered users.</li>
+                    <li>View and respond to user feedback (data stored in Firestore).</li>
+                    <li>View and manage reported users (e.g., disable accounts).</li>
+                    <li>View and manage disabled users (e.g., enable accounts).</li>
+                    <li>View all administrator accounts.</li>
+                    <li>View all created groups.</li>
+                    <li>Admin Profile Management.</li>
+                    <li>Secure Admin Authentication.</li>
+                </ul>
+
+
+                 <p><strong>Concepts Learned & Applied:</strong></p>
+                <ul>
+                    <li>Full-stack Mobile Application Development</li>
+                    <li>Client-Server Architecture (Interaction with Firebase/Supabase APIs)</li>
+                    <li>Real-time Database Management & Data Synchronization</li>
+                    <li>Local Database Integration (Room) and Offline Capability</li>
+                    <li>User Authentication and Authorization</li>
+                    <li>Implementing Background Tasks (WorkManager)</li>
+                    <li>Push Notification Implementation</li>
+                    <li>Data Serialization (JSON parsing)</li>
+                    <li>Asynchronous Programming (Handling network and database operations off the main thread)</li>
+                    <li>UI/UX Design and Implementation</li>
+                    <li>Custom View Development (potentially for drawing/invisible ink)</li>
+                    <li>Web View Integration and Control</li>
+                    <li>Basic Security Principles (E2EE concepts, Passphrase protection)</li>
+                    <li>Error Handling and Robustness</li>
+                    <li>Version Control (Git & GitHub)</li>
+                    <li>Problem Solving & Debugging</li>
+                    <li>Project Management (Managing a large, multi-feature project)</li>
+                </ul>
+
+                <hr> <!-- Optional horizontal rule for separation -->
+                <p><strong>Video Demonstrations:</strong></p>
+                <div class="video-gallery"> <!-- Using a div to potentially style multiple videos -->
+                     <!-- Make sure video-container style is in your styles.css -->
+                    <h4>Account Creation & Login Flow</h4>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2kyQT_bChn8?si=wOu35kxngyaZ-b9p" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <h4>User Features Walkthrough</h4>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/uzeoVaNxQ8w?si=aV1ZvJxLRcdpt45" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <h4>Admin Dashboard Functionality</h4>
+                    <div class="video-container">
+                         <!-- Added loop=1&mute=1&playlist=BS8twDRtras to potentially autoplay muted and loop if it works -->
+                         <!-- You might need to remove these if they cause issues or if you prefer standard embed -->
+                        <iframe src="https://www.youtube.com/embed/BS8twDRtras?si=ayqXvNylmxXxIMq_&controls=0&loop=1&mute=1&playlist=BS8twDRtras" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <hr> <!-- Optional end rule -->
+
+
+                <p class="project-links">
+                    <!-- Replace with your actual GitHub repo link for CircleUp -->
+                    <a href="https://github.com/sana00199/CircleUp.git" target="_blank">View Code on GitHub</a>
+                    <!-- Add other links specific to CircleUp if any -->
+                </p>
+            </div>
+
+             <p style="text-align: center; margin-top: 30px;"><a href="android-java-projects.html" class="button-link-small">← Back to Android Java Projects</a></p>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Sana Mehboob. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
