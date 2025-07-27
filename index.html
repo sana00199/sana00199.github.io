@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sana Mehboob | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Optional: Add a Favicon -->
+    <title>Sana Mehboob | Aspiring Android Developer Portfolio</title>
+    <!-- Link to your DEDICATED CSS file for the index page -->
+    <link rel="stylesheet" href="index-styles.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Optional: Add a Favicon (Recommended for polish) -->
     <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="container">
-            <h1>Sana Mehboob</h1>
-            <p>Aspiring Android Developer | BSIT Graduate</p>
-            <nav>
+            <h1 class="site-title">Sana Mehboob</h1>
+            <p class="site-tagline">Aspiring Android Developer | BSIT Graduate</p>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -25,114 +30,135 @@
         </div>
     </header>
 
-    <section id="about">
+    <!-- Hero/About Section -->
+    <section id="about" class="hero-section-about">
         <div class="container">
-            <h2>About Me</h2>
-            <img src="images/your-profile-picture.jpg" alt="Sana Mehboob Profile Picture" class="profile-img"> <!-- Optional: Add your picture -->
-            <p>I am a passionate and dedicated BSIT graduate from Punjab University, specializing in mobile application development. Throughout my degree, I built a strong foundation in core IT concepts including Object-Orientated Programming, Database Systems, and Computer Networks.</p>
-            <p>My primary focus is on Android development using Java. I enjoy building functional and user-friendly mobile applications. I recently completed my Final Year Project, 'CircleUp,' a comprehensive Android messaging app developed entirely in Java. This project allowed me to gain hands-on experience in building a full-stack mobile application, utilizing technologies such as Java, Android Studio, Firebase for backend services (Authentication, Realtime Database), and Room Database for offline data persistence. I also implemented end-to-end encryption and integrated push notifications using OneSignal.</p>
-            <p>Building mobile applications and solving real-world problems through code is what drives me. I am now eager to apply these skills in an entry-level software development role and contribute to a dynamic team.</p>
-             <!-- Link to LinkedIn for a more detailed bio -->
-             <p><a href="https://www.linkedin.com/in/sanamehboob19/" target="_blank">View Full Profile on LinkedIn</a></p>
+            <div class="profile-section-content">
+                <img src="images/your-profile-picture.jpg" alt="Sana Mehboob Profile Picture" class="profile-img"> <!-- REMEMBER TO REPLACE THIS IMAGE -->
+                <h2 class="section-heading-hero">About Me</h2>
+                <p>I am a passionate and dedicated <strong>BSIT graduate</strong> from Punjab University, specializing in <strong>mobile application development</strong> with a strong focus on <strong>Android using Java</strong>. My academic journey provided a solid foundation in core IT concepts, including Object-Oriented Programming, Database Systems, and Computer Networks.</p>
+                <p>I thrive on building functional and user-friendly mobile applications that solve real-world problems. My capstone achievement is <strong>'CircleUp,'</strong> a comprehensive Android messaging app developed entirely in Java for my Final Year Project. This experience provided me with hands-on expertise in full-stack mobile development, integrating technologies like Firebase (Authentication, Realtime Database), Room Database for robust offline persistence, and implementing critical features like <strong>end-to-end encryption</strong> and <strong>push notifications</strong> using OneSignal.</p>
+                <p>I am now eager to apply these skills in an entry-level software development role and contribute to a dynamic and innovative team.</p>
+                <p class="call-to-action">
+                    <a href="https://www.linkedin.com/in/sanamehboob19/" target="_blank" class="button-link-small">
+                        <i class="fab fa-linkedin"></i> View Full Profile on LinkedIn
+                    </a>
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="projects">
+    <!-- Projects Overview Section -->
+    <section id="projects" class="content-section projects-dark-bg"> <!-- Changed to projects-dark-bg for a different background from overall dark-bg -->
         <div class="container">
-            <h2>My Projects</h2>
-            <p>Here are some of the Android Java projects I have built:</p>
+            <h2 class="section-heading">My Projects</h2>
+            <p class="text-center section-description">Explore a selection of my mobile application development projects, highlighting diverse functionalities and technical skills.</p>
 
-            <!-- Link to the separate Android Java Projects page -->
-            <div class="projects-overview">
-                 <a href="android-java-projects.html" class="button-link">View All Android Java Projects</a>
+            <div class="projects-overview-cards">
+                <!-- Featured Project 1: CircleUp -->
+                <a href="circleup-details.html" class="project-card-main-link">
+                    <div class="project-card-main">
+                        <img src="images/circleuplogo_one.png" alt="CircleUp App Screenshot"> <!-- REMEMBER TO REPLACE THIS IMAGE -->
+                        <div class="card-content">
+                            <h3>CircleUp: Secure & Interactive Messaging App</h3>
+                            <p>My Final Year Project: A comprehensive Android messaging app with End-to-End Encryption, real-time collaboration (drawing, browsing), and an admin panel.</p>
+                            <span class="view-details-button">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Featured Project 2: Sana's Dev Hub -->
+                <a href="sanas-dev-hub-details.html" class="project-card-main-link">
+                    <div class="project-card-main">
+                        <img src="images/sanaslearning_logo.jpg" alt="Sana's Dev Hub Screenshot"> <!-- REMEMBER TO REPLACE THIS IMAGE -->
+                        <div class="card-content">
+                            <h3>Sana's Dev Hub: Dynamic E-Learning App</h3>
+                            <p>An interactive Android e-learning platform featuring dynamic content parsing, integrated quizzes, and diverse learning modules.</p>
+                            <span class="view-details-button">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
             </div>
 
-             <!-- You can add a brief mention or thumbnail of a key project here if you like, or keep it simple -->
-             <!-- Example: -->
-             <!--
-             <div class="project-highlight">
-                  <h3>Featured Project: CircleUp Messaging App</h3>
-                  <img src="images/circleup-screenshot.jpg" alt="CircleUp Screenshot">
-                  <p>A secure, feature-rich messaging app built for my Final Year Project.</p>
-                  <a href="circleup-details.html" class="button-link-small">Learn More</a>
-             </div>
-             -->
-
-
+            <p class="text-center project-links">
+                 <a href="android-java-projects.html" class="button-link">
+                     <i class="fas fa-folder-open"></i> View All Android Java Projects
+                 </a>
+            </p>
         </div>
     </section>
 
-    <section id="skills">
+    <!-- Skills Section -->
+    <section id="skills" class="content-section light-bg">
         <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div>
-                    <h3>Programming Languages:</h3>
+            <h2 class="section-heading">Skills & Expertise</h2>
+            <p class="text-center section-description">My technical toolkit and applied soft skills for crafting effective software solutions.</p>
+            <div class="skills-grid">
+                <div class="skill-category-item">
+                    <h4><i class="fas fa-code"></i> Programming Languages</h4>
                     <ul>
-                        <li>Java</li>
-                        <li>C++</li>
-                        <li>Python (Basic)</li>
-                        <li>C# (Basic)</li>
-                        <li>JavaScript (Basic)</li>
-                        <li>C (Basic)</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>SQL</li>
+                        <li><i class="fas fa-check-circle"></i> Java (Advanced)</li>
+                        <li><i class="fas fa-check-circle"></i> C++ (Intermediate)</li>
+                        <li><i class="fas fa-check-circle"></i> Python (Basic)</li>
+                        <li><i class="fas fa-check-circle"></i> JavaScript (Basic)</li>
+                        <li><i class="fas fa-check-circle"></i> HTML & CSS (Intermediate)</li>
+                        <li><i class="fas fa-check-circle"></i> SQL (Intermediate)</li>
                     </ul>
                 </div>
-                 <div>
-                    <h3>Mobile Development:</h3>
+                <div class="skill-category-item">
+                    <h4><i class="fab fa-android"></i> Mobile Development</h4>
                     <ul>
-                        <li>Android Development (Java)</li>
-                        <li>Android Studio</li>
-                        <li>XML Layouts</li>
-                        <li>Activity & Fragment Lifecycle</li>
-                        <li>Intents</li>
-                        <li>UI/UX Design Principles (Basic)</li>
+                        <li><i class="fas fa-check-circle"></i> Android Development (Java)</li>
+                        <li><i class="fas fa-check-circle"></i> Android Studio</li>
+                        <li><i class="fas fa-check-circle"></i> UI/UX Design Principles</li>
+                        <li><i class="fas fa-check-circle"></i> Activity & Fragment Lifecycle</li>
+                        <li><i class="fas fa-check-circle"></i> Intents & Services</li>
+                        <li><i class="fas fa-check-circle"></i> RecyclerView & Adapters</li>
                     </ul>
-                 </div>
-                 <div>
-                    <h3>Databases & Backend:</h3>
+                </div>
+                <div class="skill-category-item">
+                    <h4><i class="fas fa-database"></i> Databases & Backend</h4>
                     <ul>
-                        <li>Firebase (Realtime Database, Authentication)</li>
-                        <li>Room Database</li>
-                        <li>Database Design (Basic)</li>
+                        <li><i class="fas fa-check-circle"></i> Firebase Realtime Database</li>
+                        <li><i class="fas fa-check-circle"></i> Firebase Authentication</li>
+                        <li><i class="fas fa-check-circle"></i> Firebase Firestore</li>
+                        <li><i class="fas fa-check-circle"></i> Room Database (Android)</li>
+                        <li><i class="fas fa-check-circle"></i> SQL Database Design</li>
+                        <li><i class="fas fa-check-circle"></i> RESTful API Concepts</li>
+                        <li><i class="fas fa-check-circle"></i> Supabase (Media Storage)</li>
                     </ul>
-                 </div>
-                 <div>
-                    <h3>Tools & Concepts:</h3>
+                </div>
+                <div class="skill-category-item">
+                    <h4><i class="fas fa-tools"></i> Tools & Concepts</h4>
                     <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Object-Oriented Programming (OOP)</li>
-                        <li>Data Structures</li>
-                        <li>Algorithms (Basic)</li>
-                        <li>Software Engineering Principles (Basic)</li>
-                        <li>End-to-End Encryption (Conceptual)</li>
-                        <li>Push Notifications (Integration via OneSignal)</li>
-                        <li>Problem Solving</li>
-                        <li>Teamwork</li>
-                        <li>Communication</li>
-                        <li>Time Management</li>
+                        <li><i class="fas fa-check-circle"></i> Git & GitHub</li>
+                        <li><i class="fas fa-check-circle"></i> Object-Oriented Programming (OOP)</li>
+                        <li><i class="fas fa-check-circle"></i> Data Structures & Algorithms</li>
+                        <li><i class="fas fa-check-circle"></i> Software Engineering Principles</li>
+                        <li><i class="fas fa-check-circle"></i> End-to-End Encryption (Concepts)</li>
+                        <li><i class="fas fa-check-circle"></i> Push Notifications (OneSignal)</li>
+                        <li><i class="fas fa-check-circle"></i> Asynchronous Programming</li>
+                        <li><i class="fas fa-check-circle"></i> Problem Solving & Debugging</li>
                     </ul>
-                 </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="content-section dark-bg">
         <div class="container">
-            <h2>Contact Me</h2>
-            <p>I'm open to new opportunities. Feel free to connect or reach out!</p>
+            <h2 class="section-heading">Get In Touch</h2>
+            <p class="text-center section-description">I'm enthusiastic about new opportunities and collaborations. Feel free to connect or reach out directly!</p>
             <ul class="contact-list">
-                <li>Email: <a href="mailto:sanasippra0019@gmail.com">sanasippra0019@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/sanamehboob19/" target="_blank">linkedin.com/in/sanamehboob19</a></li>
-                <li>GitHub: <a href="https://github.com/sana00199" target="_blank">github.com/sana00199</a></li>
+                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:sanasippra0019@gmail.com">sanasippra0019@gmail.com</a></li>
+                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/sanamehboob19/" target="_blank">linkedin.com/in/sanamehboob19</a></li>
+                <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/sana00199" target="_blank">github.com/sana00199</a></li>
             </ul>
         </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
         <div class="container">
             <p>© 2025 Sana Mehboob. All rights reserved.</p>
         </div>

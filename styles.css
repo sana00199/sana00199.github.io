@@ -1,475 +1,1045 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif; /* A common, readable font */
+/* --- Global Styles & Resets --- */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Define your consistent color palette */
+    --primary-color: #7A3F99; /* Deep Purple */
+    --secondary-color: #EFE4F7; /* Very Light Lavender (for backgrounds) */
+    --accent-color: #C53DDC; /* Bright Purple/Magenta */
+    --dark-text: #1a1a1a;
+    --light-text: #f0f0f0;
+    --background-light: #fdfdff; /* Near white */
+    --background-dark: #2c2c2c; /* Dark gray for contrast sections */
+    --border-color: #ddd;
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--accent-color);
+    --card-bg-light: #ffffff;
+    --card-bg-dark: rgba(255,255,255,0.08); /* White with transparency for dark sections */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f7f6; /* Light grey background */
-    scroll-behavior: smooth; /* Smooth scrolling for internal links */
+    color: var(--dark-text);
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased; /* Smoother fonts on WebKit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Smoother fonts on Firefox */
 }
 
 .container {
-    width: 90%; /* Use 90% of the width */
-    max-width: 960px; /* Max width for large screens */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Add some padding on the sides */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-h1, h2, h3 {
-    color: #333;
-    margin-top: 0;
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-text);
+    line-height: 1.2;
 }
+/* Headings are light in dark sections */
+.content-section.dark-bg h1,
+.content-section.dark-bg h2,
+.content-section.dark-bg h3,
+.content-section.dark-bg h4 {
+    color: var(--light-text);
+}
+
 
 a {
-    color: #007bff; /* Standard link color */
+    color: var(--link-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
 
 img {
-    max-width: 100%; /* Ensure images don't overflow their containers */
+    max-width: 100%;
     height: auto;
+    display: block; /* Prevents extra space below images */
 }
 
-/* Header Styles */
-header {
-    background: #333; /* Dark header background */
-    color: #fff;
-    padding: 1.5rem 0;
-    text-align: center;
+ul {
+    list-style: none;
+    padding-left: 0;
     margin-bottom: 20px;
 }
 
-header h1 {
-    color: #fff;
-    margin-bottom: 0.5rem;
+ul li {
+    position: relative;
+    padding-left: 0; /* No default padding for list items in general */
+    margin-bottom: 8px;
+    font-size: 1.05em;
 }
 
-header p {
-    margin-top: 0;
-    font-size: 1.1rem;
+/* Default bullet point (can be overridden by specific lists) */
+ul li::before {
+    content: "\2022";
+    color: var(--accent-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em; /* Adjust to position correctly */
+    position: absolute;
+    left: 0;
 }
 
-/* Navigation Styles */
-nav ul {
-    padding: 0;
-    list-style: none;
-    margin-top: 1rem;
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
 }
 
-nav ul li {
-    display: inline-block; /* Arrange list items horizontally */
+.text-center {
+    text-align: center;
+}
+
+.section-description { /* Added for descriptive text under headings */
+    font-size: 1.15em;
+    color: var(--dark-text); /* Default color for light backgrounds */
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* Centered with space below */
+    line-height: 1.7;
+}
+.content-section.dark-bg .section-description {
+    color: rgba(255,255,255,0.9); /* Lighter color for dark backgrounds */
+}
+
+
+/* --- Header Styles --- */
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.main-header .site-title {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.main-header .site-tagline {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.main-nav ul {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
     margin: 0 15px;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
+.main-nav a {
+    color: var(--light-text);
     font-weight: bold;
-    font-size: 1rem;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-size: 1.1em;
+    padding: 8px 12px; /* Slightly larger clickable area */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover {
-    color: #007bff; /* Change color on hover */
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--light-text); /* Keep text light on hover */
     text-decoration: none;
 }
 
-/* Section Styles */
-section {
-    padding: 40px 0; /* Padding top and bottom for each section */
-    margin-bottom: 20px; /* Space between sections */
-    background: #fff; /* White background for sections */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+/* --- Section Styles --- */
+.content-section {
+    padding: 80px 0; /* Generous padding for sections */
+    border-bottom: 1px solid var(--border-color);
 }
 
-section:nth-of-type(odd) {
-     background-color: #f9f9f9; /* Slightly different background for odd sections */
+.content-section:last-of-type {
+    border-bottom: none;
 }
 
+.content-section.light-bg {
+    background-color: var(--background-light);
+    color: var(--dark-text);
+}
 
-section h2 {
+.content-section.dark-bg {
+    background-color: var(--background-dark);
+    color: var(--light-text);
+}
+
+.section-heading {
+    font-size: 2.5em;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
-section h2::after { /* Underline effect for section titles */
+.section-heading::after {
     content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 3px;
-    width: 50px; /* Width of the underline */
-    background-color: #007bff;
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
+/* --- Hero Section (About Me) --- */
+#about.hero-section-about {
+    padding: 100px 0;
+    /* Soft gradient for About Me section */
+    background: linear-gradient(to bottom, var(--secondary-color), var(--background-light) 60%); /* Starts light purple, fades to near white */
+    color: var(--dark-text); /* Text is dark for readability on light background */
+}
 
-/* About Section Specific Styles */
-#about {
+.profile-section-content { /* Wrapper for image and text in About section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+}
+
+.section-heading-hero {
+    font-size: 3em;
+    margin-bottom: 25px;
+    color: var(--primary-color); /* Primary color for heading */
+}
+.section-heading-hero::after {
+    background-color: var(--primary-color); /* Underline matches heading */
 }
 
 .profile-img {
-    width: 150px; /* Size of the profile picture */
-    height: 150px;
-    border-radius: 50%; /* Make it round */
-    object-fit: cover; /* Crop image to fit */
-    margin-bottom: 20px;
-    border: 4px solid #007bff; /* Border around the picture */
+    width: 200px; /* Slightly larger profile picture */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 6px solid var(--primary-color); /* Stronger border matching primary color */
+    box-shadow: 0 0 0 10px rgba(122, 63, 153, 0.1); /* Subtle outer ring matching primary color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(122, 63, 153, 0.2); /* Enhanced hover effect */
 }
 
 #about p {
-    font-size: 1.1rem;
-    color: #555;
-    text-align: left; /* Align text to the left */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify; /* Justify text for a cleaner look */
+    color: var(--dark-text);
+}
+#about strong {
+    color: var(--primary-color); /* Make bold text stand out with primary color */
 }
 
 
-/* Projects Section Specific Styles */
-.project-item {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+/* --- Project Overview on Main Page (Featured Projects) --- */
+.projects-overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.project-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.project-item h3 {
-    margin-bottom: 10px;
-    color: #555;
-}
-
-.project-item img {
-    display: block; /* Make image a block element */
-    margin: 0 auto 20px auto; /* Center image and add space below */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    max-height: 300px; /* Prevent images from being too tall */
-    object-fit: contain; /* Ensure entire image is visible */
-}
-
-.project-item p {
-    margin-bottom: 15px;
-}
-
-.project-links a {
-    display: inline-block; /* Make links behave like blocks */
-    margin-right: 15px;
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
+.project-card-main-link {
     text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card-main-link:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.project-card-main {
+    background-color: var(--card-bg-dark); /* Dark card background */
+    color: var(--light-text);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card-main img {
+    width: 100%;
+    height: 220px; /* Slightly taller images */
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.project-card-main .card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-main h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--light-text);
+}
+
+.project-card-main p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.9);
+    flex-grow: 1;
+}
+
+.project-card-main .view-details-button {
+    display: inline-flex; /* Use flex for icon alignment */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border-radius: 25px; /* More rounded */
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: bold;
+    align-self: flex-start; /* Aligns button to the left within flex container */
     transition: background-color 0.3s ease;
 }
 
-.project-links a:hover {
-    background-color: #0056b3;
+.project-card-main .view-details-button:hover {
+    background-color: #A033B0; /* Slightly darker accent on hover */
     text-decoration: none;
 }
 
-
-/* Skills Section Specific Styles */
-#skills .skills-list {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between grid items */
+.project-card-main .view-details-button i {
+    margin-left: 8px;
+    font-size: 0.9em;
 }
 
-#skills .skills-list div {
-    background-color: #e9ecef; /* Light background for skill categories */
-    padding: 20px;
-    border-radius: 5px;
+/* --- Android Java Projects List Page (Styling) --- */
+.projects-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Space between cards */
+    margin-top: 40px;
 }
 
-#skills .skills-list h3 {
+.project-list-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-list-card-link:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Lighter shadow for light background */
+    text-decoration: none;
+}
+
+.project-list-card {
+    background-color: var(--card-bg-light); /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Subtle shadow */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures cards in a row have same height */
+    color: var(--dark-text); /* Ensure text is dark on light background */
+}
+
+.project-list-card img {
+    width: 100%;
+    height: 180px; /* Consistent image height for list items */
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-list-card .card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-list-card h3 {
+    font-size: 1.4em;
     margin-top: 0;
-    color: #333;
-    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--primary-color); /* Primary color for titles */
+}
+
+.project-list-card p {
+    font-size: 0.95em;
     margin-bottom: 15px;
+    color: var(--dark-text); /* Dark text for descriptions */
+    flex-grow: 1;
 }
 
-#skills .skills-list ul {
-    list-style: disc; /* Bullet points */
-    padding-left: 20px;
-    margin: 0;
+.project-list-card .technologies-used {
+    font-size: 0.85em;
+    color: #666; /* Slightly lighter gray for tech list */
+    margin-bottom: 0;
+    margin-top: auto; /* Pushes to bottom of content area */
+}
+.project-list-card .technologies-used i {
+    margin-right: 5px;
+    color: var(--accent-color); /* Icon color */
 }
 
-#skills .skills-list li {
-    margin-bottom: 5px;
-    font-size: 1rem;
-    color: #555;
+.project-list-card .view-details-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background-color: var(--primary-color); /* Primary color for button */
+    color: var(--light-text);
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-top: 15px; /* Space above button */
+    transition: background-color 0.3s ease;
+}
+.project-list-card .view-details-button:hover {
+    background-color: var(--accent-color); /* Accent on hover */
+    text-decoration: none;
+}
+.project-list-card .view-details-button i {
+    margin-left: 8px;
+    font-size: 0.8em;
 }
 
 
-/* Contact Section Specific Styles */
-#contact {
-     text-align: center;
+/* --- Skills Section --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
 }
 
+.skill-category-item {
+    background-color: var(--card-bg-light);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.skill-category-item h4 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.skill-category-item h4 i {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: var(--accent-color);
+}
+
+.skill-category-item ul li {
+    padding-left: 0;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+.skill-category-item ul li::before { /* Hide default bullet point */
+    display: none;
+}
+.skill-category-item ul li i {
+    margin-right: 10px;
+    color: var(--accent-color);
+    font-size: 1.1em;
+}
+
+
+/* --- Contact Section --- */
 .contact-list {
-     list-style: none;
-     padding: 0;
+    text-align: center;
+    padding: 0;
+    margin-top: 30px;
 }
 
 .contact-list li {
-     margin-bottom: 15px;
-     font-size: 1.1rem;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-list li i {
+    margin-right: 15px;
+    color: var(--accent-color);
+    font-size: 1.5em;
 }
 
 .contact-list li a {
-    color: #007bff;
+    color: var(--light-text);
+    font-weight: bold;
 }
 
-/* Footer Styles */
-footer {
-    background: #333;
-    color: #fff;
+.contact-list li a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* --- General Button & Link Styles --- */
+.button-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.button-link:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.button-link i {
+    margin-right: 10px;
+}
+
+.button-link-small {
+    font-size: 0.9em;
+    padding: 10px 20px;
+    background-color: var(--background-dark);
+    color: var(--light-text);
+    border-radius: 20px;
+    box-shadow: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button-link-small:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+.button-link-small i {
+    margin-right: 8px;
+}
+
+
+/* --- Project Details Page Specific Styles --- */
+
+/* Hero section for project details page */
+#project-hero {
+    padding: 100px 0;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    color: var(--light-text);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-title {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--light-text);
+}
+
+.project-tagline {
+    font-size: 1.5em;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--light-text);
+}
+
+/* NEW: Style for the project logo in the hero section */
+
+
+/* NEW: Style for the project logo in the hero section */
+.project-hero-logo {
+    max-width: 250px; /* Adjust size as needed for your logo */
+    height: auto;
+    /* margin-top: 40px; */ /* REMOVED: Let flexbox spacing or container padding handle vertical spacing */
+    margin: 40px auto 0 auto; /* ADDED: 40px top margin, auto left/right for centering, 0 bottom margin */
+    border-radius: 15%; /* Slightly rounded corners for a logo, adjust as needed */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Stronger shadow for a prominent logo */
+    background-color: rgba(255,255,255,0.9); /* Subtle background for the logo if it's transparent */
+    padding: 15px; /* Padding inside the logo's box/border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-hero-logo:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6); /* Even stronger shadow on hover */
+}
+
+/* NEW: Specific color for Calculator project hero section text */
+#calculator-hero .project-title {
+    color: var(--primary-color); /* Makes the title deep purple */
+}
+
+#calculator-hero .project-tagline {
+    color: var(--dark-text); /* Makes the tagline dark text for readability */
+    opacity: 1; /* Ensure full opacity for dark text */
+}
+/* END NEW */
+
+
+
+
+/* Feature Categories (for circleup-details.html) */
+.feature-category {
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: var(--card-bg-light);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.content-section.dark-bg .feature-category {
+    background-color: var(--card-bg-dark);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.feature-category h4 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+.content-section.dark-bg .feature-category h4 {
+    color: var(--accent-color);
+}
+
+.feature-category h4 .feature-icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: var(--accent-color);
+}
+
+/* NEW: Styling for feature list items (replaces default bullets) */
+.feature-list-items {
+    list-style: none; /* Hide default list bullets */
+    padding-left: 0; /* Remove default padding */
+}
+
+.feature-list-items li {
+    display: flex; /* Use flexbox for item layout */
+    align-items: flex-start; /* Align icon and text to top */
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: var(--dark-text); /* Ensure text is dark on light background */
+}
+.content-section.dark-bg .feature-list-items li {
+    color: rgba(255,255,255,0.9); /* Lighter text for dark background */
+}
+
+.feature-list-items li::before { /* Hide default custom bullet from general ul li */
+    display: none;
+}
+
+.feature-list-items li i { /* Styling for the Font Awesome icon within the li */
+    font-size: 1.2em; /* Size of the checkmark/other icon */
+    margin-right: 15px; /* Space between icon and text */
+    color: var(--accent-color); /* Icon color */
+    flex-shrink: 0; /* Prevent icon from shrinking on wrapping text */
+    margin-top: 0.15em; /* Slightly adjust vertical alignment if needed */
+}
+
+/* Style for strong text inside feature list items */
+.feature-list-items li strong {
+    color: var(--primary-color); /* Primary color for bold text in features */
+}
+.content-section.dark-bg .feature-list-items li strong {
+    color: var(--accent-color); /* Accent color for bold text in dark sections */
+}
+
+
+/* Problem/Solution Grid */
+.problem-solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.problem-solution-item {
+    background-color: var(--card-bg-dark);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.problem-solution-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.problem-solution-item .icon-large {
+    font-size: 2em;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+.problem-solution-item p {
+    font-size: 1em;
+    color: rgba(255,255,255,0.8);
+}
+.solution-box {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.solution-box h4, .solution-box .icon-large {
+    color: var(--light-text);
+}
+.solution-box p {
+    color: rgba(255,255,255,0.95);
+}
+
+/* Challenges & Learnings Grid */
+.challenge-learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.challenge-item {
+    background-color: var(--card-bg-dark);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    color: var(--light-text);
+}
+.challenge-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.challenge-item .icon-small {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+.challenge-item p {
+    font-size: 1em;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Tech Stack Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    text-align: center;
+}
+
+.tech-item {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--light-text);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+.tech-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255,255,255,0.15);
+}
+.tech-item .fab, .tech-item .fas {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+/* Concept List (for circleup-details.html) */
+.concept-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin-top: 40px;
+}
+.concept-list li {
+    background-color: var(--card-bg-light);
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+    align-items: flex-start;
+    color: var(--dark-text);
+}
+.content-section.dark-bg .concept-list li {
+    background-color: var(--card-bg-dark);
+    color: var(--light-text);
+}
+.concept-list li:hover {
+    transform: translateY(-3px);
+}
+.concept-list li .fas {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: var(--primary-color);
+}
+.content-section.dark-bg .concept-list li .fas {
+    color: var(--accent-color);
+}
+
+/* Video Gallery */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.video-item {
+    background-color: var(--card-bg-light);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.content-section.dark-bg .video-item {
+    background-color: var(--card-bg-dark);
+}
+
+.video-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--primary-color);
+}
+.content-section.dark-bg .video-item h4 {
+    color: var(--light-text);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Horizontal Rule for separation */
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 60px 0;
+}
+
+
+/* --- Footer Styles --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
-    font-size: 0.9rem;
+    font-size: 0.9em;
+    margin-top: 80px;
 }
 
-/* Responsive Adjustments */
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .section-heading, .section-heading-hero {
+        font-size: 2.2em;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    .projects-overview-cards, .projects-list-grid, .skills-grid { /* Added projects-list-grid */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
-    .container {
-        width: 95%; /* Use more width on smaller screens */
-        padding: 0 10px;
+    .main-header .site-title {
+        font-size: 2em;
     }
-
-    nav ul li {
-        margin: 0 8px; /* Reduce space between nav items */
+    .main-nav li {
+        margin: 5px 10px;
     }
-
-    section {
-        padding: 30px 0; /* Less padding on smaller screens */
+    .content-section {
+        padding: 50px 0;
     }
-
-    #skills .skills-list {
-         grid-template-columns: 1fr; /* Stack skill categories on very small screens */
+    .section-heading, .section-heading-hero {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .project-title {
+        font-size: 2.5em;
+    }
+    .project-tagline {
+        font-size: 1.2em;
+    }
+    .project-hero-logo { /* Responsive adjustment for logo */
+        max-width: 200px;
+    }
+    p, .section-description {
+        font-size: 1em;
+    }
+    ul li {
+        font-size: 0.95em;
+    }
+    .projects-overview-cards, .projects-list-grid, .skills-grid, .problem-solution-grid, .tech-grid, .concept-list, .video-gallery, .challenge-learning-grid { /* Added projects-list-grid */
+        grid-template-columns: 1fr;
+    }
+    .tech-item, .problem-solution-item, .challenge-item, .concept-list li, .skill-category-item, .project-list-card { /* Added project-list-card */
+        padding: 20px;
+    }
+    .button-link {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .button-link-small {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .contact-list li {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .contact-list li i {
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem; /* Adjust font sizes */
+    .main-nav a {
+        font-size: 0.9em;
+        padding: 5px 8px;
     }
-    header p {
-        font-size: 1rem;
+    .section-heading, .section-heading-hero {
+        font-size: 1.5em;
     }
-    nav ul li {
-         display: block; /* Stack navigation links */
-         margin: 5px 0;
+    .project-title {
+        font-size: 2em;
     }
-    section h2 {
-        font-size: 1.5rem;
+    .project-tagline {
+        font-size: 1em;
     }
-    .profile-img {
-        width: 100px;
-        height: 100px;
+    .button-link {
+        padding: 10px 20px;
+        font-size: 0.9em;
     }
-     .project-links a {
-        display: block; /* Stack project links */
-        margin-right: 0;
-        margin-bottom: 10px;
-     }
-      .project-links a:last-child {
-        margin-bottom: 0;
-     }
+    .button-link-small {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
 }
 
 
 
-/* Make Embedded Videos Responsive */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio - adjust if your videos are not 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 800px; /* Should match your section max-width */
-    background: #000; /* Background color while loading */
-    margin: 15px auto; /* Center the video and add space */
-    border-radius: 8px; /* Match section corners */
+
+/* Tech Stack Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px; /* Slightly increased gap for better separation */
+    text-align: center;
 }
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-/* Add to your existing styles.css file */
-
-/* Style for the button link on the main Projects section */
-.projects-overview {
-    text-align: center; /* Center the button */
-    margin: 40px 0;
-}
-
-.button-link {
-    display: inline-block; /* Make it behave like a button */
-    padding: 12px 25px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform for slight press effect */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow */
-}
-
-.button-link:hover {
-    background-color: #0056b3;
-    text-decoration: none;
-    transform: translateY(-2px); /* Slight lift effect */
-}
-
-.button-link:active {
-    transform: translateY(0); /* Press effect */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Reduce shadow when pressed */
-}
-
-
-/* Style for the smaller back button links */
-.button-link-small {
-     display: inline-block;
-     padding: 8px 15px;
-     background-color: #6c757d; /* Grey color */
-     color: white;
-     border-radius: 5px;
-     text-decoration: none;
-     font-size: 0.9rem;
-     transition: background-color 0.3s ease;
-}
-
-.button-link-small:hover {
-     background-color: #5a6268;
-     text-decoration: none;
-}
-
-
-/* Styles for the Project List Page (android-java-projects.html) */
-.projects-list-container {
-    display: flex; /* Use flexbox to arrange items */
-    flex-direction: column; /* Stack items vertically */
-    gap: 20px; /* Space between project cards */
-}
-
-.project-card-link {
-     text-decoration: none; /* Remove underline from the link wrapping the card */
-     color: inherit; /* Inherit text color from parent */
-     display: block; /* Make the link take up block space */
-     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
-}
-
-.project-card-link:hover {
-     text-decoration: none; /* Ensure no underline on hover */
-     transform: translateY(-5px); /* Slight lift effect on hover */
-     box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* More pronounced shadow on hover */
-}
-
-.project-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.tech-item {
+    background-color: var(--card-bg-light); /* DEFAULT: Light background for tech items */
+    border-radius: 10px; /* Slightly more rounded */
     padding: 20px;
-    display: flex; /* Use flexbox for card content layout */
-    align-items: center; /* Vertically align items */
-    gap: 20px; /* Space between image and text */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--dark-text); /* DEFAULT: Dark text for tech items */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Stronger shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex; /* Use flex to center icon and text */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 120px; /* Ensure consistent height for all items */
 }
 
-.project-card img {
-    width: 80px; /* Fixed width for small image */
-    height: 80px; /* Fixed height */
-    object-fit: cover; /* Cover the area, might crop */
-    border-radius: 5px;
-    flex-shrink: 0; /* Prevent image from shrinking */
-}
-
-.project-card h3 {
-     margin-top: 0;
-     margin-bottom: 5px;
-     color: #007bff; /* Use primary color for title */
-}
-
-.project-card p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: #555;
-}
-
-.project-card .technologies-used {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 0; /* No space below technologies */
-}
-
-.project-card .view-details-button {
-     display: inline-block;
-     margin-top: 10px;
-     padding: 5px 10px;
-     background-color: #e9ecef; /* Light background */
-     border-radius: 3px;
-     font-size: 0.8rem;
-     color: #333;
-}
-
-/* Responsive adjustments for project cards */
-@media (max-width: 600px) {
-    .project-card {
-        flex-direction: column; /* Stack image and text vertically */
-        text-align: center;
-    }
-    .project-card img {
-        margin-bottom: 15px;
-    }
+/* Specific styles when .tech-item is inside a dark-bg section (like circleup-details.html) */
+.content-section.dark-bg .tech-item {
+    background-color: var(--card-bg-dark); /* Darker background for dark sections */
+    color: var(--light-text); /* Light text for dark sections */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Stronger shadow for dark sections */
 }
 
 
-/* Ensure existing video-container style is present and correct */
-/* (It seems correct in your original CSS provided) */
-/*
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 800px;
-    background: #000;
-    margin: 15px auto;
-    border-radius: 8px;
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Stronger shadow on hover */
 }
-.video-container iframe, .video-container object, .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* Hover effect for dark background version */
+.content-section.dark-bg .tech-item:hover {
+    background-color: rgba(255,255,255,0.15); /* Slightly lighter on hover */
 }
-*/
 
-/* Add this if you want a hr style */
-hr {
-    border: 0;
-    height: 1px;
-    background: #eee;
-    margin: 30px 0;
+
+.tech-item .fab, .tech-item .fas {
+    display: block;
+    font-size: 2.2em; /* Slightly larger icons */
+    margin-bottom: 12px; /* Increased space */
+    color: var(--accent-color); /* Icons remain accent color */
+}
+
+/* Ensure the text is visible even if the icon is not found for some reason */
+.tech-item .fab:empty + *, .tech-item .fas:empty + * {
+    margin-top: 0; /* No extra margin if icon is missing */
 }

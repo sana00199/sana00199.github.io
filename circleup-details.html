@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CircleUp Project Details | Sana Mehboob</title>
-    <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="styles.css">
+    <title>CircleUp: Secure & Interactive Messaging | Sana Mehboob's Portfolio</title>
+    <!-- Link to your DEDICATED CSS file for this page -->
+    <link rel="stylesheet" href="circleup-details-styles.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Optional: Add a Favicon -->
     <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="container">
-            <h1>Sana Mehboob</h1>
-            <p>CircleUp: Next-Gen Social Messaging App</p>
-             <nav>
+            <h1 class="site-title">Sana Mehboob</h1>
+            <p class="site-tagline">Software Developer & Innovator</p>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="index.html#about">About</a></li>
-                    <li><a href="android-java-projects.html">Projects List</a></li> <!-- Link back to the list -->
+                    <li><a href="android-java-projects.html">Projects</a></li> <!-- Link to your main projects list -->
                     <li><a href="index.html#skills">Skills</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -26,128 +30,246 @@
         </div>
     </header>
 
-    <section id="project-details"> <!-- Changed section ID for clarity -->
-        <div class="container">
+    <main>
+        <!-- Hero Section: App Title and Main Visual -->
+        <section id="project-hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="project-title">CircleUp: Secure & Interactive Messaging</h2>
+                    <p class="project-tagline">Your Private Circle for Encrypted & Engaging Communication</p>
+                </div>
+                <!-- Use your app logo here -->
+                <img src="images/circleuplogo_one.png" alt="CircleUp App Logo" class="project-hero-logo">
+            </div>
+        </section>
 
-            <h2>CircleUp: Next-Gen Social Messaging App (Final Year Project)</h2>
+        <!-- Overview Section -->
+        <section id="overview" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Project Overview</h3>
+                <p><strong>CircleUp</strong> is a robust, feature-rich Android messaging application developed as my Final Year Project. It stands out by meticulously focusing on user privacy and offering innovative real-time communication features, moving beyond the typical social media clutter. This project demonstrates strong proficiency in full-stack mobile application development, complex backend integration, advanced security implementation, and seamless real-time functionalities.</p>
+                <p>It was engineered to be a comprehensive communication platform, showcasing the ability to design, build, and deploy a secure and engaging mobile experience from concept to completion.</p>
+            </div>
+        </section>
 
-            <div class="project-item"> <!-- Reusing the project-item style -->
-                 <!-- Use a relevant screenshot of your app here -->
-                <img src="images/circleup-screenshot.jpg" alt="Screenshot of CircleUp Messaging App - Chats List">
-
-                <p><strong>Project Overview:</strong></p>
-                <p>Developed 'CircleUp,' a robust and feature-rich Android messaging application in Java as my Final Year Project. This application goes beyond basic messaging to provide a secure and comprehensive communication platform, showcasing a strong command over various Android development concepts, backend integration, security implementation, and real-time features. CircleUp demonstrates the ability to build complex, full-stack mobile applications.</p>
-
-                <p><strong>Key Technical Stack:</strong></p>
-                <p>Implemented the application using a diverse set of modern technologies:</p>
-                <ul>
-                    <li><strong>Language:</strong> Java</li>
-                    <li><strong>IDE:</strong> Android Studio</li>
-                    <li><strong>UI/Layout:</strong> XML Layouts</li>
-                    <li><strong>Backend (Authentication & Realtime Database):</strong> Firebase Realtime Database for real-time data synchronization (messages, user status, etc.) and Firebase Authentication for user registration and login.</li>
-                    <li><strong>Backend (Firestore for Feedback):</strong> Utilized Firestore for managing user feedback data efficiently.</li>
-                    <li><strong>Local Persistence:</strong> Room Database for robust offline data storage and caching.</li>
-                    <li><strong>Media Storage:</strong> Supabase for storing media files, including videos and voice notes.</li>
-                    <li><strong>Push Notifications:</strong> Integrated OneSignal SDK for sending and managing push notifications (e.g., new message alerts, friend requests).</li>
-                    <li><strong>Background Tasks:</strong> Implemented scheduled messages using WorkManager for reliable background execution.</li>
-                    <li><strong>Version Control:</strong> Git and GitHub for collaborative development and code management.</li>
-                    <li><strong>APIs/Concepts:</strong> RESTful APIs (implied by Firebase/Supabase interaction), JSON data handling.</li>
-                </ul>
-
-                 <p><strong>Core Messaging & Communication Features:</strong></p>
-                <ul>
-                    <li><strong>One-to-One Chats:</strong> Direct, private messaging between users.</li>
-                    <li><strong>Group Chats:</strong> Create and participate in group conversations.</li>
-                    <li><strong>Temporary Chat Rooms:</strong> Feature for time-limited conversations (including voice note implementation stored on Supabase).</li>
-                    <li><strong>Scheduled Messages:</strong> Ability to schedule text or image messages to be sent at a later time using WorkManager.</li>
-                    <li><strong>Real-time Updates:</strong> Instant message delivery and status updates using Firebase Realtime Database.</li>
-                </ul>
-
-                 <p><strong>Advanced & Unique Features:</strong></p>
-                <ul>
-                    <li><strong>End-to-End Encryption (E2EE):</strong> Implemented E2EE for one-to-one chats to ensure message privacy. Messages are encrypted/decrypted locally on devices. (Likely involving concepts like AES for symmetric encryption and RSA for key exchange/management).</li>
-                    <li><strong>Secure Access with Passphrase:</strong> Chats are protected by a user-defined security passphrase/PIN. Messages cannot be decrypted without this passphrase, even if the device is compromised, demonstrating a strong focus on user data security.</li>
-                    <li><strong>Account Recovery:</strong> Implemented an account recovery mechanism, including generating and using a recovery code (though resetting passphrase results in loss of old encrypted messages, highlighting the importance of the original passphrase).</li>
-                    <li><strong>Shared Drawing Feature:</strong> A collaborative feature allowing users in a chat to draw together in real-time.</li>
-                    <li><strong>Invisible Ink Feature:</strong> Messages initially appear hidden and are revealed by user interaction.</li>
-                    <li><strong>Shared Web View Feature:</strong> Allows both users in a chat to view and interact with a web page simultaneously, enabling collaborative browsing or content sharing (like your "Let's get started together" feature).</li>
-                    <!-- Add other unique features if any -->
-                </ul>
-
-                <p><strong>Admin Panel (Separate Module):</strong></p>
-                 <p>Developed a dedicated Admin Dashboard module to manage the application and users:</p>
-                <ul>
-                    <li>View Notifications (alerts, reports).</li>
-                    <li>Broadcast Messages to all users.</li>
-                    <li>View and manage all registered users.</li>
-                    <li>View and respond to user feedback (data stored in Firestore).</li>
-                    <li>View and manage reported users (e.g., disable accounts).</li>
-                    <li>View and manage disabled users (e.g., enable accounts).</li>
-                    <li>View all administrator accounts.</li>
-                    <li>View all created groups.</li>
-                    <li>Admin Profile Management.</li>
-                    <li>Secure Admin Authentication.</li>
-                </ul>
-
-
-                 <p><strong>Concepts Learned & Applied:</strong></p>
-                <ul>
-                    <li>Full-stack Mobile Application Development</li>
-                    <li>Client-Server Architecture (Interaction with Firebase/Supabase APIs)</li>
-                    <li>Real-time Database Management & Data Synchronization</li>
-                    <li>Local Database Integration (Room) and Offline Capability</li>
-                    <li>User Authentication and Authorization</li>
-                    <li>Implementing Background Tasks (WorkManager)</li>
-                    <li>Push Notification Implementation</li>
-                    <li>Data Serialization (JSON parsing)</li>
-                    <li>Asynchronous Programming (Handling network and database operations off the main thread)</li>
-                    <li>UI/UX Design and Implementation</li>
-                    <li>Custom View Development (potentially for drawing/invisible ink)</li>
-                    <li>Web View Integration and Control</li>
-                    <li>Basic Security Principles (E2EE concepts, Passphrase protection)</li>
-                    <li>Error Handling and Robustness</li>
-                    <li>Version Control (Git & GitHub)</li>
-                    <li>Problem Solving & Debugging</li>
-                    <li>Project Management (Managing a large, multi-feature project)</li>
-                </ul>
-
-                <hr> <!-- Optional horizontal rule for separation -->
-                <p><strong>Video Demonstrations:</strong></p>
-                <div class="video-gallery"> <!-- Using a div to potentially style multiple videos -->
-                     <!-- Make sure video-container style is in your styles.css -->
-                    <h4>Account Creation & Login Flow</h4>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/2kyQT_bChn8?si=wOu35kxngyaZ-b9p" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- Problem & Solution Section -->
+        <section id="problem-solution" class="content-section dark-bg">
+            <div class="container">
+                <h3 class="section-heading">Addressing Real-World Challenges</h3>
+                <div class="problem-solution-grid">
+                    <div class="problem-solution-item">
+                        <h4><i class="fas fa-lock icon-large"></i> The Privacy Dilemma</h4>
+                        <p>In an era of increasing data breaches and intrusive social platforms, users demand truly private and secure conversations without compromising usability.</p>
                     </div>
-
-                    <h4>User Features Walkthrough</h4>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/uzeoVaNxQ8w?si=aV1ZvJxLRcdpt45" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="problem-solution-item">
+                        <h4><i class="fas fa-hand-holding-heart icon-large"></i> Generic Communication Tools</h4>
+                        <p>Most messaging apps offer standard features, lacking the unique, interactive elements that can truly enrich digital dialogue.</p>
                     </div>
-
-                    <h4>Admin Dashboard Functionality</h4>
-                    <div class="video-container">
-                         <!-- Added loop=1&mute=1&playlist=BS8twDRtras to potentially autoplay muted and loop if it works -->
-                         <!-- You might need to remove these if they cause issues or if you prefer standard embed -->
-                        <iframe src="https://www.youtube.com/embed/BS8twDRtras?si=ayqXvNylmxXxIMq_&controls=0&loop=1&mute=1&playlist=BS8twDRtras" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="problem-solution-item">
+                        <h4><i class="fas fa-wrench icon-large"></i> Complex App Management</h4>
+                        <p>Maintaining user safety and app integrity requires robust administrative tools, which are often overlooked in smaller projects.</p>
+                    </div>
+                    <div class="problem-solution-item solution-box">
+                        <h4><i class="fas fa-lightbulb icon-large"></i> CircleUp's Solution</h4>
+                        <p>CircleUp was engineered to be a <strong>private communication hub</strong>, emphasizing <strong>End-to-End Encryption</strong> from the ground up. It pioneers unique interactive features like <strong>Shared Drawing</strong> and <strong>Collaborative Browsing</strong>, transforming passive messaging into engaging experiences. Furthermore, it incorporates a <strong>comprehensive Admin Dashboard</strong>, ensuring meticulous user and content management for a secure and trusted environment.</p>
                     </div>
                 </div>
-                <hr> <!-- Optional end rule -->
+            </div>
+        </section>
 
 
-                <p class="project-links">
-                    <!-- Replace with your actual GitHub repo link for CircleUp -->
-                    <a href="https://github.com/sana00199/CircleUp.git" target="_blank">View Code on GitHub</a>
-                    <!-- Add other links specific to CircleUp if any -->
+        <!-- Key Features Section -->
+        <section id="features" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Core & Advanced Features</h3>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-shield-alt feature-icon"></i> Security & Privacy Foundations</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-key"></i> <strong>End-to-End Encryption (E2EE):</strong> Pioneered robust E2EE for one-to-one chats, ensuring messages are encrypted and decrypted strictly on user devices (AES for symmetric encryption, RSA for secure key exchange and management).</li>
+                        <li><i class="fas fa-fingerprint"></i> <strong>Passphrase-Protected Chats:</strong> Messages are secured by a user-defined passphrase/PIN, making them inaccessible without it, even if the device is compromised. This passphrase is required every login attempt to unlock chats.</li>
+                        <li><i class="fas fa-redo-alt"></i> <strong>Secure Account Recovery:</strong> Implemented a mechanism involving a unique recovery code for account retrieval.</li>
+                        <li><i class="fas fa-user-slash"></i> <strong>Real-time Block Status Monitoring:</strong> Accounts disabled by admins are immediately logged out and prevented from re-accessing the app until re-enabled.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-comments feature-icon"></i> Interactive & Engaging Communication</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-paint-brush"></i> <strong>Shared Drawing:</strong> A unique real-time collaborative whiteboard feature, allowing chat participants to draw and doodle together.</li>
+                        <li><i class="fas fa-eye-slash"></i> <strong>Invisible Ink:</strong> Messages appear hidden and are only revealed upon user interaction, adding a playful and private element.</li>
+                        <li><i class="fas fa-globe"></i> <strong>Collaborative Web Browsing ("Let's Search Together"):</strong> Enables users to jointly browse a web page within the chat, sharing real-time search queries and web interactions.</li>
+                        <li><i class="fas fa-microphone"></i> <strong>Voice Notes:</strong> Seamless recording and sharing of voice messages, securely stored on Supabase.</li>
+                        <li><i class="fas fa-clock"></i> <strong>Scheduled Messages:</strong> Ability to compose and schedule text or image messages for future delivery using WorkManager for reliability.</li>
+                        <li><i class="fas fa-hourglass-start"></i> <strong>Temporary Chat Rooms:</strong> Create time-limited chat environments that automatically expire, ideal for short-term discussions.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-inbox feature-icon"></i> Core Messaging & Management</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-user-friends"></i> <strong>One-to-One Messaging:</strong> Standard direct text and media exchange.</li>
+                        <li><i class="fas fa-users"></i> <strong>Group Chats:</strong> Create, manage, and participate in private group conversations.</li>
+                        <li><i class="fas fa-paperclip"></i> <strong>Media Sharing:</strong> Send and receive images, videos, and documents securely.</li>
+                        <li><i class="fas fa-sync"></i> <strong>Real-time Status Updates:</strong> Instant delivery confirmation, 'seen' receipts, and user online/offline status.</li>
+                        <li><i class="fas fa-pencil-alt"></i> <strong>Drafts Management:</strong> Conveniently save and manage message drafts.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-user-shield feature-icon"></i> Comprehensive Admin Dashboard</h4>
+                    <p>A separate, secure web-based module providing powerful tools for application oversight:</p>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-users-cog"></i> <strong>User Management:</strong> View, manage, disable, and enable user accounts.</li>
+                        <li><i class="fas fa-flag"></i> <strong>Reported Users Management:</strong> Review detailed reports from users, including reasons, reporter, and timestamp; delete reports.</li>
+                        <li><i class="fas fa-comment-dots"></i> <strong>Feedback System:</strong> View and respond to user feedback submitted through the app.</li>
+                        <li><i class="fas fa-bullhorn"></i> <strong>Global Broadcasts:</strong> Send messages to all application users.</li>
+                        <li><i class="fas fa-object-group"></i> <strong>Group Oversight:</strong> View all created groups.</li>
+                        <li><i class="fas fa-user-secret"></i> <strong>Admin Profile & Security:</strong> Secure admin authentication and profile management.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack Section -->
+        <section id="tech-stack" class="content-section dark-bg">
+            <div class="container">
+                <h3 class="section-heading">Robust Technical Stack</h3>
+                <p class="section-description">CircleUp was built using a robust and modern technology stack, ensuring scalability, performance, and security:</p>
+                <div class="tech-grid">
+                    <div class="tech-item"><i class="fab fa-java"></i> Java</div>
+                    <div class="tech-item"><i class="fab fa-android"></i> Android Studio</div>
+                    <div class="tech-item"><i class="fas fa-database"></i> Firebase Realtime DB</div>
+                    <div class="tech-item"><i class="fas fa-cloud"></i> Firebase Authentication</div>
+                    <div class="tech-item"><i class="fas fa-fire"></i> Firebase Firestore</div>
+                    <div class="tech-item"><i class="fas fa-server"></i> Supabase (Media Storage)</div>
+                    <div class="tech-item"><i class="fas fa-database"></i> Room Database</div>
+                    <div class="tech-item"><i class="fas fa-bell"></i> OneSignal (Push Notifs)</div>
+                    <div class="tech-item"><i class="fas fa-tasks"></i> WorkManager</div>
+                    <div class="tech-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+                    <div class="tech-item"><i class="fas fa-lock"></i> AES & RSA Cryptography</div>
+                    <div class="tech-item"><i class="fas fa-network-wired"></i> RESTful APIs</div>
+                    <div class="tech-item"><i class="fas fa-mobile-alt"></i> Android SDK</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Technology Rationale Section -->
+        <section id="tech-rationale" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Technology Rationale & Key Decisions</h3>
+                <p class="section-description">For CircleUp, conscious technology choices were made to optimize for cost-efficiency, security, and performance, moving beyond standard Firebase offerings when better alternatives aligned with project goals:</p>
+                <div class="rationale-grid">
+                    <div class="rationale-item">
+                        <h4><i class="fas fa-dollar-sign"></i> Cloud Storage: Firebase Storage vs. Supabase Storage</h4>
+                        <p>While Firebase offers integrated storage, its pricing model for heavy media usage can become costly. <strong>Supabase Storage</strong> was chosen as a more cost-effective and scalable solution for storing user-generated media like voice notes, images, and documents, offering robust file management with competitive pricing.</p>
+                    </div>
+                    <div class="rationale-item">
+                        <h4><i class="fas fa-envelope-open-text"></i> Push Notifications: Firebase Cloud Messaging (FCM) vs. OneSignal</h4>
+                        <p>Though FCM is Firebase's native solution, <strong>OneSignal</strong> was preferred for its extensive free tier features, user-friendly dashboard for campaign management, and advanced analytics. It provided a powerful and developer-friendly alternative for reliable push notifications without incurring immediate costs associated with high-volume FCM usage.</p>
+                    </div>
+                    <div class="rationale-item">
+                        <h4><i class="fas fa-calendar-alt"></i> Scheduled Tasks: Firebase Cloud Functions vs. WorkManager</h4>
+                        <p>For handling scheduled messages (like sending messages at a future time), <strong>WorkManager</strong> was utilized over server-side solutions like Firebase Cloud Functions. WorkManager offers a robust, on-device solution for deferrable background tasks, significantly reducing server-side costs and simplifying deployment, as it doesn't require managing server infrastructure or cloud function invocations for each scheduled message.</p>
+                    </div>
+                    <div class="rationale-item">
+                        <h4><i class="fas fa-comment-alt"></i> Feedback Storage: Firebase Realtime Database vs. Firestore</h4>
+                        <p>While most real-time chat data resides in Firebase Realtime Database, <strong>Firestore</strong> was specifically chosen for storing and managing user feedback. Firestore's document-model excels in handling structured data, complex queries, and provides better scalability for administrative tasks like filtering and searching feedback, making it ideal for the Admin Dashboard's requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Architecture & Concepts Section -->
+        <section id="architecture-concepts" class="content-section dark-bg"> <!-- Changed to dark-bg for contrast -->
+            <div class="container">
+                <h3 class="section-heading">Applied Architecture & Core Concepts</h3>
+                <p class="section-description">The development of CircleUp provided extensive practical experience in crucial software engineering principles:</p>
+                <ul class="concept-list">
+                    <li><i class="fas fa-code-branch"></i> Full-stack Mobile Application Development</li>
+                    <li><i class="fas fa-cloud-download-alt"></i> Client-Server Architecture & API Integration</li>
+                    <li><i class="fas fa-sync-alt"></i> Real-time Data Synchronization & Management</li>
+                    <li><i class="fas fa-sd-card"></i> Local Data Persistence (Room Database) & Offline Capability</li>
+                    <li><i class="fas fa-user-check"></i> User Authentication, Authorization & Session Management</li>
+                    <li><i class="fas fa-hourglass-half"></i> Asynchronous Programming & Background Task Management</li>
+                    <li><i class="fas fa-exchange-alt"></i> Data Serialization (JSON) & Deserialization</li>
+                    <li><i class="fas fa-palette"></i> UI/UX Design Principles & Material Design Implementation</li>
+                    <li><i class="fas fa-bug"></i> Robust Error Handling, Logging & Debugging Techniques</li>
+                    <li><i class="fas fa-shield-alt"></i> Core Cryptography Principles & Secure Coding Practices</li>
+                    <li><i class="fas fa-project-diagram"></i> Project Structuring, Modular Design & Scalability Considerations</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Challenges & Learnings Section -->
+        <section id="challenges-learnings" class="content-section light-bg"> <!-- Changed to light-bg -->
+            <div class="container">
+                <h3 class="section-heading">Challenges & Key Learnings</h3>
+                <p class="section-description">Navigating the complexities of building a secure, real-time messaging platform presented invaluable challenges and insights:</p>
+                <div class="challenge-learning-grid">
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-exclamation-triangle icon-small"></i> Implementing E2EE</h4>
+                        <p>Ensuring correct AES & RSA key generation, secure storage, and real-time exchange was technically demanding. Debugging decryption failures due to key mismatches or data corruption was a significant learning curve.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-stopwatch icon-small"></i> Real-time Synchronization</h4>
+                        <p>Achieving seamless, low-latency updates for messaging, shared drawing, and browsing, while managing Firebase listeners efficiently, required meticulous state management and concurrency handling.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-database icon-small"></i> Offline & Data Consistency</h4>
+                        <p>Integrating Room Database for offline access and ensuring consistent data synchronization between local storage, Firebase, and UI was complex, especially with encrypted content.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-user-lock icon-small"></i> Admin Security & Control</h4>
+                        <p>Developing a separate, secure admin panel with robust user moderation (e.g., real-time account blocking/enabling) required careful permission management and system design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demonstrations Section -->
+        <section id="video-demos" class="content-section dark-bg"> <!-- Changed to dark-bg -->
+            <div class="container">
+                <h3 class="section-heading">See CircleUp in Action</h3>
+                <p class="text-center section-description">A quick walkthrough of CircleUp's core features and the administrative interface.</p>
+                <div class="video-gallery">
+                    <div class="video-item">
+                        <h4>Account Creation & Secure Login</h4>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/2kyQT_bChn8?modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <h4>User Features Walkthrough</h4>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/uzeoVaNxQ8w?modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <h4>Admin Dashboard Functionality</h4>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/BS8twDRtras?modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <p class="project-links call-to-action">
+                    <a href="https://github.com/sana00199/CircleUp.git" target="_blank" class="button-link">
+                        <i class="fab fa-github"></i> View CircleUp Code on GitHub
+                    </a>
                 </p>
             </div>
+        </section>
 
-             <p style="text-align: center; margin-top: 30px;"><a href="android-java-projects.html" class="button-link-small">← Back to Android Java Projects</a></p>
+        <!-- Back to Projects Link -->
+        <section class="content-section back-link-section light-bg"> <!-- Changed to light-bg -->
+            <div class="container text-center">
+                <a href="android-java-projects.html" class="button-link-small">← Back to Android Java Projects</a>
+            </div>
+        </section>
+    </main>
 
-        </div>
-    </section>
-
-    <footer>
+    <footer class="main-footer">
         <div class="container">
             <p>© 2025 Sana Mehboob. All rights reserved.</p>
         </div>

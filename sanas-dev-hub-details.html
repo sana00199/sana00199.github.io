@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sana's Dev Hub: E-Learning App | Sana Mehboob's Portfolio</title>
+    <!-- Link to your DEDICATED CSS file for this page -->
+    <link rel="stylesheet" href="sanas-dev-hub-details-styles.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Optional: Add a Favicon -->
+    <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="site-title">Sana Mehboob</h1>
+            <p class="site-tagline">Software Developer & Innovator</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="android-java-projects.html">Projects</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section: Project Title and Main Visual -->
+        <section id="dev-hub-hero" class="hero-section hero-section-gradient-bg"> <!-- Changed to hero-section-gradient-bg for a distinct gradient -->
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="project-title">Sana's Dev Hub: Dynamic E-Learning App</h2>
+                    <p class="project-tagline">Your One-Stop Resource for Programming Mastery</p>
+                </div>
+                <!-- This should be a high-quality screenshot or splash screen of Sana's Dev Hub -->
+                <img src="images/sanaslearning_logo.jpg" alt="Sana's Dev Hub App Splash Screen" class="project-hero-main-screenshot"> <!-- NEW IMAGE PATH & CLASS -->
+            </div>
+        </section>
+
+        <!-- Project Summary/Overview Section -->
+        <section id="overview" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Project Overview</h3>
+                <p><strong>Sana's Dev Hub</strong> is a comprehensive, native Android application meticulously designed to be a one-stop learning resource for students and aspiring developers. This platform provides structured courses on various computer science subjects, including Data Science, Mobile App Development, and Data Structures.</p>
+                <p>The app features a rich, intuitive user interface and delivers content through multiple innovative formats such as curated video tutorials, interactive quizzes, detailed text-based cheat sheets, and hands-on assignments. This multifaceted approach creates a holistic and engaging learning experience, empowering users to master complex programming concepts efficiently.</p>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section id="features" class="content-section dark-bg">
+            <div class="container">
+                <h3 class="section-heading">Key Features & Functionalities</h3>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-sitemap feature-icon"></i> Dynamic & Scalable Course Structure</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-code-branch"></i> The app is built with a scalable architecture, allowing the main dashboard to <strong>dynamically load subject categories</strong> from a list. This makes it effortless to add new courses like "C# Web Application" or "Artificial Intelligence" without altering the core app structure.</li>
+                    </ul>
+                    <div class="feature-image-container"> <!-- Container for image -->
+                        <img src="images/sanaslearning_dashboard.jpg" alt="Sana's Dev Hub Dashboard" class="feature-image">
+                    </div>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-book-open feature-icon"></i> Rich & Diverse Content Modules</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-video"></i> <strong>Curated Video Playlists:</strong> Direct links to YouTube playlists for in-depth video tutorials (via YouTube Intent).</li>
+                        <li><i class="fas fa-globe"></i> <strong>Web-based Tutorials:</strong> Seamless integration of external learning resources like W3Schools tutorials (via custom Web Intent).</li>
+                        <li><i class="fas fa-file-alt"></i> <strong>In-app Cheat Sheets:</strong> Access to scrollable, text-based "Cheat Sheets" for quick revisions of key concepts.</li>
+                        <li><i class="fas fa-file-code"></i> <strong>Practical Assignments:</strong> Structured assignment sections with separate tutorial and question components for hands-on practice.</li>
+                    </ul>
+                    <div class="feature-image-container">
+                        <img src="images/sanaslearning_topicss.jpg" alt="Sana's Dev Hub Topic List" class="feature-image">
+                        <img src="images/sanaslearning_lessons.jpg" alt="Sana's Dev Hub Tutorial Page" class="feature-image">
+                    </div>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-question-circle feature-icon"></i> Interactive Quiz System</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-check-double"></i> A <strong>fully functional quiz engine</strong> that presents multiple-choice questions dynamically.</li>
+                        <li><i class="fas fa-chart-bar"></i> <strong>Progress Tracking:</strong> Monitors user progress with a ProgressBar and provides a detailed results screen with the final score, encouraging self-assessment.</li>
+                    </ul>
+                    <div class="feature-image-container">
+                        <img src="images/sanaslearning_quiz.jpg" alt="Sana's Dev Hub Quiz" class="feature-image">
+                        
+                    </div>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-code feature-icon"></i> Advanced Content Viewer (JSON-Powered)</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-file-code"></i> Tutorial and cheat sheet content is <strong>dynamically parsed from local JSON files</strong>, structured to mimic Jupyter Notebooks. This allows for easy content updates and management without app redeployment.</li>
+                        <li><i class="fas fa-laptop-code"></i> The viewer intelligently renders: headings (H1, H2), paragraphs, and <strong>formatted code blocks</strong> with a convenient <strong>"Copy Code" button</strong>.</li>
+                    </ul>
+                    <div class="feature-image-container">
+                        <img src="images/sanaslearning_code_viewer.jpg" alt="Sana's Dev Hub Code Viewer" class="feature-image">
+                    </div>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-tools feature-icon"></i> Resource & Solutions Hub</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-puzzle-piece"></i> The assignment section features a sophisticated `TabLayout` and `ViewPager2` implementation, providing a dedicated tab for <strong>"Solutions & Resources."</strong></li>
+                        <li><i class="fas fa-file-pdf"></i> Users can access supplementary materials like <strong>solution PDFs</strong> and <strong>CSV datasets</strong> (for practical assignments) directly via Google Drive links, enhancing the learning support.</li>
+                    </ul>
+                    <div class="feature-image-container">
+                        <img src="images/sanaslearning_solutions.jpg" alt="Sana's Dev Hub Solutions" class="feature-image">
+                    </div>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-palette feature-icon"></i> Modern & Responsive UI/UX</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-mobile-alt"></i> The entire application adheres to <strong>Material Design principles</strong>, featuring custom handwritten fonts and a consistent, visually appealing color palette.</li>
+                        <li><i class="fas fa-credit-card"></i> Utilizes <strong>MaterialCardView</strong> for clean, modern layouts, ensuring a smooth and intuitive user experience across all screens and device sizes.</li>
+                    </ul>
+                    <!-- No specific image for general UI/UX, but dashboard or quiz could imply it -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack Section -->
+        <section id="tech-stack" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Robust Technical Stack</h3>
+                <p class="section-description">Sana's Dev Hub was built using a robust selection of native Android development and general programming technologies:</p>
+                <div class="tech-grid">
+                    <div class="tech-item"><i class="fab fa-java"></i> Java</div>
+                    <div class="tech-item"><i class="fab fa-android"></i> Android Studio</div>
+                    <div class="tech-item"><i class="fas fa-code"></i> XML Layouts</div>
+                    <div class="tech-item"><i class="fas fa-mobile-alt"></i> Android SDK</div>
+                    <div class="tech-item"><i class="fas fa-file-code"></i> JSON Parsing (org.json)</div>
+                    <div class="tech-item"><i class="fas fa-layer-group"></i> RecyclerView</div>
+                    <div class="tech-item"><i class="fas fa-pager"></i> ViewPager2 & TabLayout</div>
+                    <div class="tech-item"><i class="fas fa-calendar-alt"></i> MaterialCardView</div>
+                    <div class="tech-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+                    <div class="tech-item"><i class="fas fa-bolt"></i> ExecutorService</div>
+                    <div class="tech-item"><i class="fas fa-object-ungroup"></i> Data Models</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges & Learnings Section -->
+        <section id="challenges-learnings" class="content-section dark-bg">
+            <div class="container">
+                <h3 class="section-heading">Challenges & Key Learnings</h3>
+                <p class="section-description">Building Sana's Dev Hub presented critical challenges, fostering significant growth in mobile app development and problem-solving:</p>
+                <div class="challenge-learning-grid">
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-hourglass-half icon-small"></i> Tackling ANR (UI Freezing)</h4>
+                        <p><strong>Problem:</strong> Parsing large JSON files on the main UI thread caused the app to freeze (ANR) or crash, especially on content-heavy screens like Assignments or Cheat Sheets.</p>
+                        <p><strong>Solution:</strong> Implemented <strong>background processing</strong> using <code>java.util.concurrent.ExecutorService</code>. All file I/O and JSON parsing operations were offloaded to a background thread, using <code>runOnUiThread()</code> to safely update the UI. A <code>ProgressBar</code> provided visual feedback during loading, completely resolved the ANR issue.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-columns icon-small"></i> Efficient Content Display</h4>
+                        <p><strong>Problem:</strong> The JSON content contained diverse data types (headings, paragraphs, code blocks). Displaying this dynamically within a <code>ScrollView</code> using static <code>TextViews</code> would be inefficient and hard to manage.</p>
+                        <p><strong>Solution:</strong> Designed a robust system using a <strong>RecyclerView with multiple view types</strong>. Created a <code>ContentAdapter</code> that could identify the content type (e.g., <code>TYPE_HEADING</code>, <code>TYPE_PARAGRAPH</code>, <code>TYPE_CODE</code>) and inflate the correct layout for each item. This made the content display dynamic, memory-efficient, and easily extensible.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-bug icon-small"></i> UI Component Casting Issues</h4>
+                        <p><strong>Problem:</strong> After updating a <code>TextView</code> to a <code>MaterialCardView</code> in the XML layout for a better UI, the app started crashing with a <code>ClassCastException</code>.</p>
+                        <p><strong>Solution:</strong> Debugged the <code>RecyclerView.Adapter</code> and identified that the <code>ViewHolder</code> was still trying to cast the view to a <code>TextView</code>. Corrected the variable type in the <code>ViewHolder</code> class from <code>TextView</code> to <code>MaterialCardView</code>, ensuring the Java code was in sync with the updated XML layout and preventing future casting errors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demonstration Section -->
+        <section id="video-demo" class="content-section light-bg"> <!-- Changed to light-bg -->
+            <div class="container">
+                <h3 class="section-heading">Sana's Dev Hub Demo</h3>
+                <p class="text-center section-description">A quick walkthrough of the app's features and functionalities.</p>
+                <div class="video-gallery">
+                    <div class="video-item">
+                        <h4>App Features Walkthrough</h4>
+                        <div class="video-container">
+                            <!-- REMEMBER TO ADD YOUR VIDEO LINK HERE -->
+                            <iframe src="https://www.youtube.com/embed/YOUR_DEV_HUB_VIDEO_ID?modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Add more video items if you have separate demos for specific features -->
+                </div>
+                <p class="project-links call-to-action">
+                    <!-- Replace with your actual GitHub repo link for Sana's Dev Hub -->
+                    <a href="https://github.com/sana00199/SanasDevHub.git" target="_blank" class="button-link">
+                        <i class="fab fa-github"></i> View Code on GitHub
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Back to Projects Link -->
+        <section class="content-section back-link-section">
+            <div class="container text-center">
+                <a href="android-java-projects.html" class="button-link-small">← Back to Android Java Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Sana Mehboob. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

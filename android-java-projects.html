@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android Java Projects | Sana Mehboob</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Android Java Projects | Sana Mehboob's Portfolio</title>
+    <!-- Link to your DEDICATED CSS file for this page -->
+    <link rel="stylesheet" href="android-java-projects-styles.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Optional: Add a Favicon -->
     <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="container">
-            <h1>Sana Mehboob</h1>
-            <p>Android Java Projects</p>
-            <nav>
+            <h1 class="site-title">Sana Mehboob</h1>
+            <p class="site-tagline">Android Java Projects</p>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#projects">Projects</a></li>
@@ -25,48 +30,80 @@
         </div>
     </header>
 
-    <section id="java-projects">
-        <div class="container">
-            <h2>Android Java Projects</h2>
+    <main>
+        <section id="java-projects" class="content-section light-bg">
+            <div class="container">
+                <h2 class="section-heading">Android Java Projects</h2>
+                <p class="text-center section-description">Explore my hands-on Android application development work using Java, showcasing various functionalities and technical implementations.</p>
 
-            <p>Below is a list of Android applications I have developed using Java:</p>
+                <div class="projects-list-grid">
+                    <!-- Project Card: CircleUp -->
+                    <a href="circleup-details.html" class="project-list-card-link">
+                        <div class="project-list-card">
+                            <img src="images/circleup-screenshot.jpg" alt="CircleUp App Thumbnail"> <!-- Ensure you have a small thumbnail for the list view -->
+                            <div class="card-content">
+                                <h3>CircleUp: Secure & Interactive Messaging</h3>
+                                <p>My Final Year Project - A comprehensive messaging application featuring <strong>end-to-end encryption</strong>, real-time collaboration, and a full admin panel.</p>
+                                <p class="technologies-used"><i class="fas fa-microchip"></i> <strong>Tech:</strong> Java, Firebase, Room, OneSignal, AES/RSA</p>
+                                <span class="view-details-button">View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
 
-            <div class="projects-list-container">
+                    <!-- Project Card: Sana's Dev Hub -->
+                    <a href="sanas-dev-hub-details.html" class="project-list-card-link">
+                        <div class="project-list-card">
+                            <img src="images/sanaslearning_logo.jpg" alt="Sana's Dev Hub App Thumbnail"> <!-- Ensure you have a small thumbnail for the list view -->
+                            <div class="card-content">
+                                <h3>Sana's Dev Hub: Dynamic E-Learning App</h3>
+                                <p>A comprehensive Android e-learning platform featuring <strong>dynamic JSON-based content</strong>, interactive quizzes, and modular course structures.</p>
+                                <p class="technologies-used"><i class="fas fa-microchip"></i> <strong>Tech:</strong> Java, Android SDK, JSON, ExecutorService, RecyclerView</p>
+                                <span class="view-details-button">View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
 
-                <!-- Project Item: CircleUp -->
-                <a href="circleup-details.html" class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/circleup-screenshot.jpg" alt="CircleUp App Screenshot"> <!-- Use a smaller image if available -->
-                        <h3>CircleUp: Next-Gen Social Messaging App</h3>
-                        <p>My Final Year Project - A comprehensive messaging application built with Firebase and Room Database.</p>
-                        <p class="technologies-used"><strong>Technologies:</strong> Java, Firebase, Room, OneSignal, E2EE</p>
-                        <span class="view-details-button">View Details</span>
-                    </div>
-                </a>
+                    <!-- Project Card: Simple Advanced Calculator -->
+                    <a href="calculator-details.html" class="project-list-card-link">
+                        <div class="project-list-card">
+                            <img src="images/calculator.png" alt="Calculator App Thumbnail"> <!-- Ensure you have a small thumbnail for the list view -->
+                            <div class="card-content">
+                                <h3>Simple Advanced Calculator</h3>
+                                <p>A functional and responsive calculator app demonstrating intuitive UI design, complex expression evaluation, and robust event handling.</p>
+                                <p class="technologies-used"><i class="fas fa-microchip"></i> <strong>Tech:</strong> Java, Android Studio, XML Layouts</p>
+                                <span class="view-details-button">View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
 
-                <hr> <!-- Optional separator -->
+                    <!-- Project Card: Music Player (Example - Uncomment if you have one) -->
+                    <!--
+                    <a href="music-player-details.html" class="project-list-card-link">
+                        <div class="project-list-card">
+                            <img src="images/music-player-list-thumbnail.jpg" alt="Music Player App Thumbnail">
+                            <div class="card-content">
+                                <h3>Music Player App</h3>
+                                <p>A local music player application with playlist management, media playback controls, and UI animations.</p>
+                                <p class="technologies-used"><i class="fas fa-microchip"></i> <strong>Tech:</strong> Java, Android Media Framework, SQLite</p>
+                                <span class="view-details-button">View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    -->
 
-                <!-- Project Item: Simple Advanced Calculator -->
-                <a href="calculator-details.html" class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/calculator-screenshot-small.jpg" alt="Calculator App Screenshot"> <!-- Add a small screenshot of your calculator -->
-                        <h3>Simple Advanced Calculator</h3>
-                        <p>A functional calculator app demonstrating UI design, event handling, and core logic implementation.</p>
-                         <p class="technologies-used"><strong>Technologies:</strong> Java, Android Studio, XML</p>
-                         <span class="view-details-button">View Details</span>
-                    </div>
-                </a>
+                    <!-- Add more project cards here as you build more projects -->
 
-                <!-- Add more project cards here as you build more projects -->
+                </div>
+
+                <p class="text-center back-link-section">
+                    <a href="index.html#projects" class="button-link-small">← Back to Projects Overview</a>
+                </p>
 
             </div>
+        </section>
+    </main>
 
-             <p style="text-align: center; margin-top: 30px;"><a href="index.html#projects" class="button-link-small">← Back to Projects Overview</a></p>
-
-        </div>
-    </section>
-
-    <footer>
+    <footer class="main-footer">
         <div class="container">
             <p>© 2025 Sana Mehboob. All rights reserved.</p>
         </div>

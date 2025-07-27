@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator Project Details | Sana Mehboob</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Calculator: Android Java Project | Sana Mehboob's Portfolio</title>
+    <!-- Link to your DEDICATED CSS file for this page -->
+    <link rel="stylesheet" href="calculator-details-styles.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Optional: Add a Favicon -->
     <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="container">
-            <h1>Sana Mehboob</h1>
-            <p>Simple Advanced Calculator Project Details</p>
-             <nav>
+            <h1 class="site-title">Sana Mehboob</h1>
+            <p class="site-tagline">Android Java Projects</p>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="index.html#about">About</a></li>
-                    <li><a href="android-java-projects.html">Projects List</a></li> <!-- Link back to the list -->
+                    <li><a href="android-java-projects.html">Projects</a></li>
                     <li><a href="index.html#skills">Skills</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -25,80 +30,130 @@
         </div>
     </header>
 
-    <section id="project-details"> <!-- Reusing section ID -->
-        <div class="container">
-
-            <h2>Simple Advanced Calculator</h2>
-
-            <div class="project-item"> <!-- Reusing the project-item style -->
-                 <!-- Add a screenshot of your calculator here -->
-                <img src="images/calculator-screenshot.jpg" alt="Simple Advanced Calculator App Screenshot"> <!-- Use a larger screenshot -->
-
-                <p>Developed a functional and user-friendly calculator application for Android using Java. This project demonstrates the implementation of core Android UI concepts, event handling, and mathematical logic.</p>
-
-                <p><strong>Features:</strong></p>
-                <ul>
-                    <li>Basic arithmetic operations: Addition (+), Subtraction (-), Multiplication (×), Division (÷)</li>
-                    <li>Advanced operations: Modulo (%), Power (^), Square Root (√), Sign Change (+/-)</li>
-                    <li>Decimal point input</li>
-                    <li>Clear (C) and Backspace (DEL / ←) functionality</li>
-                    <li>Handles potential errors like division by zero and square root of negative numbers</li>
-                    <li>Displays the full expression history during calculations</li>
-                    <li>Allows repeating the last operation by pressing "=" again after a result is shown</li>
-                    <li>Simple and clean UI layout</li>
-                </ul>
-
-                 <p><strong>Technologies Used:</strong></p>
-                <ul>
-                    <li>Java</li>
-                    <li>Android Studio</li>
-                    <li>XML Layouts (LinearLayout, GridLayout)</li>
-                    <li>Android SDK (TextView, Button, View.OnClickListener)</li>
-                    <li>Math class (for sqrt, pow)</li>
-                    <li>DecimalFormat (for number formatting)</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                </ul>
-
-                 <p><strong>Concepts Applied:</strong></p>
-                <ul>
-                    <li>Activity Lifecycle (Basic)</li>
-                    <li>UI Design and Layout Management</li>
-                    <li>Event Handling (Button Clicks)</li>
-                    <li>Managing Application State (using variables like currentInput, operand1, operator)</li>
-                    <li>String Manipulation and Parsing</li>
-                    <li>Basic Arithmetic Logic and Error Handling</li>
-                    <li>Implementation of Mathematical Functions</li>
-                    <li>History Tracking (using StringBuilder)</li>
-                    <li>Handling User Input edge cases (e.g., decimals, leading zeros)</li>
-                </ul>
-
-                <!-- Optional: Add a video demo if you create one -->
-                <!--
-                <hr>
-                <h4>Calculator Demo</h4>
-                <div class="video-container">
-                    <iframe src="[Link to your YouTube/Vimeo demo]" frameborder="0" allowfullscreen></iframe>
+    <main>
+        <!-- Hero Section: Project Title and Main Visual -->
+        <section id="calculator-hero" class="hero-section hero-section-light-bg"> <!-- Added hero-section-light-bg class -->
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="project-title">Simple Advanced Calculator</h2>
+                    <p class="project-tagline">Mastering Arithmetic & Logic on Android</p>
                 </div>
-                <hr>
-                -->
-
-
-                <p class="project-links">
-                    <!-- Replace with the actual GitHub repo link for your Calculator project -->
-                    <a href="https://github.com/sana00199/SimpleAdvancedCalculator.git" target="_blank">View Code on GitHub</a>
-                    <!-- If you make a video, add the link here -->
-                     <!-- <a href="[Link to your YouTube/Vimeo demo]" target="_blank">Watch Demo</a> -->
-                </p>
+                <!-- Use a high-res screenshot of your calculator here -->
+                <img src="images/calculator.png" alt="Simple Advanced Calculator App Screenshot" class="project-main-screenshot">
             </div>
+        </section>
 
-             <p style="text-align: center; margin-top: 30px;"><a href="android-java-projects.html" class="button-link-small">← Back to Android Java Projects</a></p>
+        <!-- Overview Section -->
+        <section id="overview" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Project Overview</h3>
+                <p>Developed a robust and user-friendly <strong>Calculator application</strong> for Android using Java. This project served as a foundational exercise in mastering core Android UI concepts, event handling, and implementing complex mathematical logic. It demonstrates proficiency in crafting clean, functional, and intuitive mobile interfaces.</p>
+            </div>
+        </section>
 
+        <!-- Key Features Section -->
+        <section id="features" class="content-section dark-bg">
+            <div class="container">
+                <h3 class="section-heading">Key Functionalities</h3>
 
-        </div>
-    </section>
+                <div class="feature-category">
+                    <h4><i class="fas fa-calculator feature-icon"></i> Core Operations</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-plus-minus"></i> <strong>Basic Arithmetic:</strong> Implemented addition (+), subtraction (-), multiplication (×), and division (÷).</li>
+                        <li><i class="fas fa-percent"></i> <strong>Advanced Functions:</strong> Supported modulo (%), power (^), square root (√), and sign change (+/-) operations.</li>
+                        <li><i class="fas fa-dot-circle"></i> <strong>Decimal Input:</strong> Enabled precise decimal point input for accurate calculations.</li>
+                        <li><i class="fas fa-eraser"></i> <strong>Clear & Backspace:</strong> Full 'Clear (C)' and single-character 'Backspace (DEL)' functionalities for input correction.</li>
+                    </ul>
+                </div>
 
-    <footer>
+                <div class="feature-category">
+                    <h4><i class="fas fa-chart-line feature-icon"></i> Usability & Logic</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-exclamation-triangle"></i> <strong>Error Handling:</strong> Robustly managed potential errors such as division by zero and square root of negative numbers.</li>
+                        <li><i class="fas fa-history"></i> <strong>Expression History Display:</strong> Continuously displayed the full mathematical expression as it's entered, enhancing user clarity.</li>
+                        <li><i class="fas fa-redo"></i> <strong>Repeat Last Operation:</strong> Allowed users to repeat the last performed operation by pressing "=" again after a result is shown.</li>
+                        <li><i class="fas fa-mobile-alt"></i> <strong>Clean & Intuitive UI:</strong> Designed a simple, clean, and responsive user interface for ease of use.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack Section -->
+        <section id="tech-stack" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Technical Stack</h3>
+                <p class="section-description">This project was built using foundational Android development technologies:</p>
+                <div class="tech-grid">
+                    <div class="tech-item"><i class="fab fa-java"></i> Java</div>
+                    <div class="tech-item"><i class="fab fa-android"></i> Android Studio</div>
+                    <div class="tech-item"><i class="fas fa-code"></i> XML Layouts</div>
+                    <div class="tech-item"><i class="fas fa-mobile"></i> Android SDK</div>
+                    <div class="tech-item"><i class="fas fa-calculator"></i> Math Class (Java)</div>
+                    <div class="tech-item"><i class="fas fa-file-invoice-dollar"></i> DecimalFormat</div>
+                    <div class="tech-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concepts Applied Section -->
+        <section id="concepts-applied" class="content-section dark-bg">
+            <div class="container">
+                <h3 class="section-heading">Applied Concepts</h3>
+                <p class="section-description">The development of this calculator reinforced key Android and software engineering principles:</p>
+                <ul class="concept-list">
+                    <li><i class="fas fa-mobile"></i> Android Activity Lifecycle</li>
+                    <li><i class="fas fa-vector-square"></i> UI Design & Layout Management (LinearLayout, GridLayout)</li>
+                    <li><i class="fas fa-hand-pointer"></i> Event Handling (OnClickListener)</li>
+                    <li><i class="fas fa-brain"></i> Application State Management</li>
+                    <li><i class="fas fa-sitemap"></i> String Manipulation & Parsing</li>
+                    <li><i class="fas fa-bug"></i> Basic Error Handling & Debugging</li>
+                    <li><i class="fas fa-keyboard"></i> Handling User Input Edge Cases</li>
+                    <li><i class="fas fa-project-diagram"></i> Modular Code Structure</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Optional: Video Demonstration Section -->
+        <!-- Uncomment this section if you create a video demo -->
+        <!--
+        <section id="video-demo" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Calculator Demo</h3>
+                <p class="text-center section-description">See the calculator in action.</p>
+                <div class="video-gallery">
+                    <div class="video-item">
+                        <h4>Calculator Features Walkthrough</h4>
+                        <div class="video-container">
+                            <iframe src="[Link to your YouTube/Vimeo demo]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Project Links -->
+        <p class="project-links call-to-action">
+            <a href="https://github.com/sana00199/SimpleAdvancedCalculator.git" target="_blank" class="button-link">
+                <i class="fab fa-github"></i> View Code on GitHub
+            </a>
+            <!-- If you add a video, uncomment this and update link -->
+            <!--
+            <a href="[Link to your YouTube/Vimeo demo]" target="_blank" class="button-link">
+                <i class="fas fa-video"></i> Watch Demo
+            </a>
+            -->
+        </p>
+
+        <!-- Back to Projects Link -->
+        <section class="content-section back-link-section">
+            <div class="container text-center">
+                <a href="android-java-projects.html" class="button-link-small">← Back to Android Java Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
         <div class="container">
             <p>© 2025 Sana Mehboob. All rights reserved.</p>
         </div>
