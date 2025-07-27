@@ -20,7 +20,51 @@
     --card-bg-light: #ffffff;
     --card-bg-dark: rgba(255,255,255,0.08); /* White with transparency for dark sections */
     --projects-overview-bg: #4A2B6C; /* A slightly different dark purple for projects section */
+     --other-projects-bg: var(--background-light);
 }
+
+
+/* --- Project Overview on Main Page (Featured Projects) --- */
+.projects-overview-cards {
+    /* ... existing styles ... */
+}
+
+.project-card-main-link {
+    /* ... existing styles ... */
+}
+
+.project-card-main {
+    /* ... existing styles ... */
+}
+
+/* NEW: Styling for Web Project Cards (inherits from .project-card-main but overrides colors) */
+.project-card-main.project-card-web {
+    background-color: var(--card-bg-light); /* Light background for web project card */
+    color: var(--dark-text); /* Dark text for readability */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Lighter shadow for light background */
+}
+
+.project-card-main.project-card-web img {
+    border-bottom: 1px solid var(--border-color); /* Lighter border below image */
+}
+
+.project-card-main.project-card-web h3 {
+    color: var(--primary-color); /* Primary color for title */
+}
+
+.project-card-main.project-card-web p {
+    color: var(--dark-text); /* Dark text for description */
+}
+
+.project-card-main.project-card-web .view-details-button {
+    background-color: var(--primary-color); /* Primary color for button */
+    color: var(--light-text);
+}
+.project-card-main.project-card-web .view-details-button:hover {
+    background-color: var(--accent-color); /* Accent color on hover */
+}
+/* END NEW */
+
 
 body {
     font-family: 'Roboto', sans-serif;

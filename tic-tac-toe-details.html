@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe: Online Multiplayer Game | Sana Mehboob's Portfolio</title>
+    <!-- Link to your DEDICATED CSS file for this page -->
+    <link rel="stylesheet" href="tic-tac-toe-details-styles.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Optional: Add a Favicon -->
+    <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="site-title">Sana Mehboob</h1>
+            <p class="site-tagline">Software Developer & Innovator</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="android-java-projects.html">Projects</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section: Project Title and Main Visual -->
+        <section id="tic-tac-toe-hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="project-title">Sana's Tic Tac Toe: Online Multiplayer</h2>
+                    <p class="project-tagline">Play & Connect: Real-time Fun with Friends!</p>
+                </div>
+                <!-- Main screenshot of your Tic Tac Toe game -->
+                <img src="images/TICTACTOE.jpg" alt="Sana's Tic Tac Toe App Screenshot" class="project-hero-main-screenshot"> <!-- REMEMBER TO REPLACE THIS IMAGE -->
+            </div>
+        </section>
+
+        <!-- Project Summary/Overview Section -->
+        <section id="overview" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Project Overview</h3>
+                <p><strong>Sana's Tic Tac Toe</strong> is a dynamic, web-based online multiplayer game developed using HTML, CSS, and JavaScript, leveraging Firebase for real-time data synchronization. This project showcases the ability to build interactive web applications with live updates and user-to-user connectivity, demonstrating foundational skills in web development and backend integration for real-time experiences.</p>
+                <p>The game allows two players to connect using a unique game ID, providing a seamless and engaging experience across different web browsers and devices.</p>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section id="features" class="content-section dark-bg">
+            <div class="container">
+                <h3 class="section-heading">Key Features & Functionalities</h3>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-gamepad feature-icon"></i> Online Multiplayer Gameplay</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-user-friends"></i> Supports <strong>two-player online mode</strong>, allowing friends to play together remotely.</li>
+                        <li><i class="fas fa-id-card"></i> **Game ID System:** Players can either start a new game (generating a unique ID) or join an existing game by entering a shared ID.</li>
+                        <li><i class="fas fa-share-alt"></i> **Easy Sharing:** Game IDs are prominently displayed with a "Copy ID" button for effortless sharing with opponents.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-sync-alt feature-icon"></i> Real-time Synchronization</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-wifi"></i> **Live Board Updates:** Game moves (placing 'X' or 'O') are synchronized in real-time across both players' devices using Firebase.</li>
+                        <li><i class="fas fa-hand-point-right"></i> **Turn Management:** The game clearly indicates the current player's turn ("It's Your Turn" / "[Opponent's Name]'s Turn"), providing clear guidance.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-trophy feature-icon"></i> Game Logic & Session Management</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-award"></i> **Win/Draw Detection:** Accurately identifies and announces the winner or a draw based on Tic Tac Toe rules.</li>
+                        <li><i class="fas fa-redo"></i> **Replay Options:** After a game concludes, players can choose to "Play Again" (re-match with the same opponent) or "New Game" (start a fresh session).</li>
+                        <li><i class="fas fa-times-circle"></i> **Session Handling:** Manages game session lifecycle, including notifications for session end.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-category">
+                    <h4><i class="fas fa-palette feature-icon"></i> Clean & Engaging UI/UX</h4>
+                    <ul class="feature-list-items">
+                        <li><i class="fas fa-mobile-alt"></i> Designed with a modern, clean interface featuring a vibrant purple-to-pink gradient background and smoothly rounded cards and buttons.</li>
+                        <li><i class="fas fa-font"></i> Utilizes a clear and consistent font throughout for enhanced readability.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack Section -->
+        <section id="tech-stack" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">Technical Stack</h3>
+                <p class="section-description">Sana's Tic Tac Toe was built using foundational web technologies combined with a powerful real-time backend:</p>
+                <div class="tech-grid">
+                    <div class="tech-item"><i class="fab fa-html5"></i> HTML</div>
+                    <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS</div>
+                    <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="tech-item"><i class="fas fa-database"></i> Firebase Realtime DB</div>
+                    <div class="tech-item"><i class="fab fa-firebase"></i> Firebase Hosting</div>
+                    <div class="tech-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+                    <div class="tech-item"><i class="fas fa-terminal"></i> Command Line</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges & Learnings Section -->
+        <section id="challenges-learnings" class="content-section dark-bg">
+            <div class="container">
+                <h3 class="section-heading">Challenges & Key Learnings</h3>
+                <p class="section-description">Developing a real-time online game presented unique and insightful challenges:</p>
+                <div class="challenge-learning-grid">
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-exchange-alt icon-small"></i> Real-time State Synchronization</h4>
+                        <p><strong>Problem:</strong> Ensuring the game board state, player turns, and winner status were instantly and consistently updated across two different clients over the internet.</p>
+                        <p><strong>Solution:</strong> Leveraged <strong>Firebase Realtime Database</strong> to continuously synchronize game data. Implemented listeners to update the UI immediately upon changes in the database, ensuring a fluid and seamless multiplayer experience.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-code-branch icon-small"></i> Game Logic & Win Conditions</h4>
+                        <p><strong>Problem:</strong> Accurately implementing the Tic Tac Toe win-checking algorithm and managing player turns, especially in an asynchronous, distributed environment.</p>
+                        <p><strong>Solution:</strong> Developed a robust JavaScript game engine that managed board state, validated moves, and efficiently checked for winning combinations and draw conditions after every turn, ensuring fair and accurate gameplay.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-user-friends icon-small"></i> Session Management & Connectivity</h4>
+                        <p><strong>Problem:</strong> Creating a simple yet effective system for two players to connect, join a specific game instance, and handle session lifecycles (start, end, rematch).</p>
+                        <p><strong>Solution:</strong> Implemented a **unique Game ID system** where Firebase nodes represented individual game sessions. This allowed players to easily share an ID and connect to the same game, facilitating smooth game initiation and re-connection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demonstration Section -->
+        <section id="video-demo" class="content-section light-bg">
+            <div class="container">
+                <h3 class="section-heading">See Sana's Tic Tac Toe in Action</h3>
+                <p class="text-center section-description">Watch a live demonstration of setting up a game, making moves, and winning.</p>
+                <div class="video-gallery">
+                    <div class="video-item">
+                        <h4>Online Gameplay Walkthrough</h4>
+                        <div class="video-container">
+                            <!-- REMEMBER TO ADD YOUR YOUTUBE VIDEO ID HERE -->
+                            <iframe src="https://www.youtube.com/embed/WEX3utrEiv4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <p class="project-links call-to-action">
+                    <!-- Replace with your actual GitHub repo link for Tic Tac Toe -->
+                    <a href="https://github.com/sana00199/tic-tac-toe.git" target="_blank" class="button-link">
+                        <i class="fab fa-github"></i> View Code on GitHub
+                    </a>
+
+                     <!-- NEW: Play Game Online Button -->
+                    <a href="https://sanatictactoe.web.app" target="_blank" class="button-link">
+
+                        
+                    <!-- Replace with your actual deployed app link -->
+                    <a href="https://sanatictactoe.web.app" target="_blank" class="button-link">
+                        <i class="fas fa-play-circle"></i> Play Game Online
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Back to Projects Link -->
+        <section class="content-section back-link-section dark-bg"> <!-- Changed to dark-bg for contrast -->
+            <div class="container text-center">
+                <a href="android-java-projects.html" class="button-link-small">← Back to Android Java Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Sana Mehboob. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
